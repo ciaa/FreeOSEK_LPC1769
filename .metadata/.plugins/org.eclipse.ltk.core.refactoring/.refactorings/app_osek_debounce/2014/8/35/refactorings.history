@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;app_osek_debounce/src/osek_blinky.c&apos; to &apos;osek_debounce.c&apos;" description="Rename resource &apos;osek_blinky.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/osek_blinky.c" name="osek_debounce.c" stamp="1409250119009" updateReferences="true"/>
-</session>

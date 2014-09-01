@@ -1,7 +1,0 @@
-src/ring_buffer.o src/ring_buffer.d: ../src/ring_buffer.c \
- /home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc/ring_buffer.h \
- /home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc/lpc_types.h
-
-/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc/ring_buffer.h:
-
-/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc/lpc_types.h:

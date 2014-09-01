@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move 1 resources to &apos;etc&apos;" description="Move 1 resources to &apos;etc&apos;" destination="etc" element1="config.oil" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1409598242438" updateReferences="true"/>
-</session>
