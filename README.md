@@ -27,6 +27,7 @@ You can get it at http://www.lpcware.com/lpcxpresso
 
 If you have any questions, please contact us at: 
 contacto(at)proyecto-ciaa(dot)com(dot)ar
+
 Also you can subscribe to our mailing list:
 http://groups.google.com/group/embebidos32
 
