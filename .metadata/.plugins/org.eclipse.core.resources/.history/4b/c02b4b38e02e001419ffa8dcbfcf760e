@@ -1,0 +1,87 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../osek/src/ActivateTask.c \
+../osek/src/CancelAlarm.c \
+../osek/src/ChainTask.c \
+../osek/src/ClearEvent.c \
+../osek/src/GetActiveApplicationMode.c \
+../osek/src/GetAlarm.c \
+../osek/src/GetAlarmBase.c \
+../osek/src/GetEvent.c \
+../osek/src/GetResource.c \
+../osek/src/GetTaskID.c \
+../osek/src/GetTaskState.c \
+../osek/src/Os.c \
+../osek/src/Os_Internal.c \
+../osek/src/ReleaseResource.c \
+../osek/src/Schedule.c \
+../osek/src/SetAbsAlarm.c \
+../osek/src/SetEvent.c \
+../osek/src/SetRelAlarm.c \
+../osek/src/ShutdownOS.c \
+../osek/src/StartOS.c \
+../osek/src/TerminateTask.c \
+../osek/src/WaitEvent.c 
+
+OBJS += \
+./osek/src/ActivateTask.o \
+./osek/src/CancelAlarm.o \
+./osek/src/ChainTask.o \
+./osek/src/ClearEvent.o \
+./osek/src/GetActiveApplicationMode.o \
+./osek/src/GetAlarm.o \
+./osek/src/GetAlarmBase.o \
+./osek/src/GetEvent.o \
+./osek/src/GetResource.o \
+./osek/src/GetTaskID.o \
+./osek/src/GetTaskState.o \
+./osek/src/Os.o \
+./osek/src/Os_Internal.o \
+./osek/src/ReleaseResource.o \
+./osek/src/Schedule.o \
+./osek/src/SetAbsAlarm.o \
+./osek/src/SetEvent.o \
+./osek/src/SetRelAlarm.o \
+./osek/src/ShutdownOS.o \
+./osek/src/StartOS.o \
+./osek/src/TerminateTask.o \
+./osek/src/WaitEvent.o 
+
+C_DEPS += \
+./osek/src/ActivateTask.d \
+./osek/src/CancelAlarm.d \
+./osek/src/ChainTask.d \
+./osek/src/ClearEvent.d \
+./osek/src/GetActiveApplicationMode.d \
+./osek/src/GetAlarm.d \
+./osek/src/GetAlarmBase.d \
+./osek/src/GetEvent.d \
+./osek/src/GetResource.d \
+./osek/src/GetTaskID.d \
+./osek/src/GetTaskState.d \
+./osek/src/Os.d \
+./osek/src/Os_Internal.d \
+./osek/src/ReleaseResource.d \
+./osek/src/Schedule.d \
+./osek/src/SetAbsAlarm.d \
+./osek/src/SetEvent.d \
+./osek/src/SetRelAlarm.d \
+./osek/src/ShutdownOS.d \
+./osek/src/StartOS.d \
+./osek/src/TerminateTask.d \
+./osek/src/WaitEvent.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+osek/src/%.o: ../osek/src/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: MCU C Compiler'
+	arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Dropbox/Privado/3ESE/workspace_osek/app_osek_blinky/inc" -I"/home/pablo/Dropbox/Privado/3ESE/workspace_osek/app_osek_blinky/osek/inc" -I"/home/pablo/Dropbox/Privado/3ESE/workspace_osek/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Dropbox/Privado/3ESE/workspace_osek/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Dropbox/Privado/3ESE/workspace_osek/app_osek_blinky/out/inc" -I"/home/pablo/Dropbox/Privado/3ESE/workspace_osek/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Dropbox/Privado/3ESE/workspace_osek/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Dropbox/Privado/3ESE/workspace_osek/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

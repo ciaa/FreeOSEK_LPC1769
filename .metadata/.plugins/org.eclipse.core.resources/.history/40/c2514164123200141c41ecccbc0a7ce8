@@ -1,0 +1,61 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+-include ../makefile.init
+
+RM := rm -rf
+
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include src/subdir.mk
+-include out/src/cortexM4/subdir.mk
+-include out/src/subdir.mk
+-include osek/src/cortexM4/subdir.mk
+-include osek/src/subdir.mk
+-include subdir.mk
+-include objects.mk
+
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
+endif
+
+-include ../makefile.defs
+
+# Add inputs and outputs from these tool invocations to the build variables 
+
+# All Target
+all: pre-build main-build
+
+# Main-build Target
+main-build: app_osek_blinky.axf
+
+# Tool invocations
+app_osek_blinky.axf: $(OBJS) $(USER_OBJS)
+	@echo 'Building target: $@'
+	@echo 'Invoking: MCU Linker'
+	arm-none-eabi-gcc -nostdlib -L"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/Debug" -L"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/Debug" -mcpu=cortex-m3 -mthumb -T app_osek_blinky.ld -o "app_osek_blinky.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@echo 'Finished building target: $@'
+	@echo ' '
+	$(MAKE) --no-print-directory post-build
+
+# Other Targets
+clean:
+	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) app_osek_blinky.axf
+	-@echo ' '
+
+pre-build:
+	-rm ../out/src/*.* ../out/inc/*.* ; php ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php  ../osek/gen/inc/Os_Cfg.h.php  ../osek/gen/src/Os_Cfg.c.php  ../osek/gen/src/Os_Internal_Cfg.c.php  ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/
+	-@echo ' '
+
+post-build:
+	-@echo 'Performing post-build steps'
+	-arm-none-eabi-size "app_osek_blinky.axf"; # arm-none-eabi-objcopy -v -O binary "app_osek_blinky.axf" "app_osek_blinky.bin" ; # checksum -p LPC1769 -d "app_osek_blinky.bin";
+	-@echo ' '
+
+.PHONY: all clean dependents
+.SECONDARY: main-build pre-build post-build
+
+-include ../makefile.targets

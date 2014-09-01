@@ -1,0 +1,1312 @@
+16:56:08 **** Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1769 ****
+make all 
+Building file: ../src/board.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/board.d" -MT"src/board.o" -MT"src/board.d" -o "src/board.o" "../src/board.c"
+../src/board.c: In function 'Board_I2C_Init':
+../src/board.c:267:2: warning: enumeration value 'I2C_NUM_INTERFACE' not handled in switch [-Wswitch]
+  switch (id) {
+  ^
+Finished building: ../src/board.c
+ 
+Building file: ../src/board_sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/board_sysinit.d" -MT"src/board_sysinit.o" -MT"src/board_sysinit.d" -o "src/board_sysinit.o" "../src/board_sysinit.c"
+Finished building: ../src/board_sysinit.c
+ 
+Building file: ../src/lpc_phy_smsc87x0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lpc_phy_smsc87x0.d" -MT"src/lpc_phy_smsc87x0.o" -MT"src/lpc_phy_smsc87x0.d" -o "src/lpc_phy_smsc87x0.o" "../src/lpc_phy_smsc87x0.c"
+Finished building: ../src/lpc_phy_smsc87x0.c
+ 
+Building target: liblpc_board_nxp_lpcxpresso_1769.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_board_nxp_lpcxpresso_1769.a"  ./src/board.o ./src/board_sysinit.o ./src/lpc_phy_smsc87x0.o   
+arm-none-eabi-ar: creating liblpc_board_nxp_lpcxpresso_1769.a
+Finished building target: liblpc_board_nxp_lpcxpresso_1769.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_board_nxp_lpcxpresso_1769.a" ; # arm-none-eabi-objdump -h -S "liblpc_board_nxp_lpcxpresso_1769.a" >"liblpc_board_nxp_lpcxpresso_1769.lss"
+   text	   data	    bss	    dec	    hex	filename
+   1036	      0	      0	   1036	    40c	board.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+    156	      0	      0	    156	     9c	board_sysinit.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+    576	      0	     18	    594	    252	lpc_phy_smsc87x0.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+ 
+16:56:09 **** Build of configuration Debug for project lpc_chip_175x_6x ****
+make all 
+Building file: ../src/adc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_17xx_40xx.d" -MT"src/adc_17xx_40xx.o" -MT"src/adc_17xx_40xx.d" -o "src/adc_17xx_40xx.o" "../src/adc_17xx_40xx.c"
+Finished building: ../src/adc_17xx_40xx.c
+ 
+Building file: ../src/can_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/can_17xx_40xx.d" -MT"src/can_17xx_40xx.o" -MT"src/can_17xx_40xx.d" -o "src/can_17xx_40xx.o" "../src/can_17xx_40xx.c"
+../src/can_17xx_40xx.c: In function 'Chip_CAN_Init':
+../src/can_17xx_40xx.c:751:20: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t i;
+                    ^
+Finished building: ../src/can_17xx_40xx.c
+ 
+Building file: ../src/chip_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/chip_17xx_40xx.d" -MT"src/chip_17xx_40xx.o" -MT"src/chip_17xx_40xx.d" -o "src/chip_17xx_40xx.o" "../src/chip_17xx_40xx.c"
+Finished building: ../src/chip_17xx_40xx.c
+ 
+Building file: ../src/clock_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/clock_17xx_40xx.d" -MT"src/clock_17xx_40xx.o" -MT"src/clock_17xx_40xx.d" -o "src/clock_17xx_40xx.o" "../src/clock_17xx_40xx.c"
+../src/clock_17xx_40xx.c: In function 'Chip_Clock_GetSYSCLKRate':
+../src/clock_17xx_40xx.c:320:2: warning: enumeration value 'SYSCTL_PLLCLKSRC_RESERVED2' not handled in switch [-Wswitch]
+  switch (Chip_Clock_GetMainPLLSource()) {
+  ^
+Finished building: ../src/clock_17xx_40xx.c
+ 
+Building file: ../src/cmp_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cmp_17xx_40xx.d" -MT"src/cmp_17xx_40xx.o" -MT"src/cmp_17xx_40xx.d" -o "src/cmp_17xx_40xx.o" "../src/cmp_17xx_40xx.c"
+Finished building: ../src/cmp_17xx_40xx.c
+ 
+Building file: ../src/crc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crc_17xx_40xx.d" -MT"src/crc_17xx_40xx.o" -MT"src/crc_17xx_40xx.d" -o "src/crc_17xx_40xx.o" "../src/crc_17xx_40xx.c"
+Finished building: ../src/crc_17xx_40xx.c
+ 
+Building file: ../src/dac_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/dac_17xx_40xx.d" -MT"src/dac_17xx_40xx.o" -MT"src/dac_17xx_40xx.d" -o "src/dac_17xx_40xx.o" "../src/dac_17xx_40xx.c"
+Finished building: ../src/dac_17xx_40xx.c
+ 
+Building file: ../src/eeprom_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/eeprom_17xx_40xx.d" -MT"src/eeprom_17xx_40xx.o" -MT"src/eeprom_17xx_40xx.d" -o "src/eeprom_17xx_40xx.o" "../src/eeprom_17xx_40xx.c"
+Finished building: ../src/eeprom_17xx_40xx.c
+ 
+Building file: ../src/emc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/emc_17xx_40xx.d" -MT"src/emc_17xx_40xx.o" -MT"src/emc_17xx_40xx.d" -o "src/emc_17xx_40xx.o" "../src/emc_17xx_40xx.c"
+Finished building: ../src/emc_17xx_40xx.c
+ 
+Building file: ../src/enet_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/enet_17xx_40xx.d" -MT"src/enet_17xx_40xx.o" -MT"src/enet_17xx_40xx.d" -o "src/enet_17xx_40xx.o" "../src/enet_17xx_40xx.c"
+Finished building: ../src/enet_17xx_40xx.c
+ 
+Building file: ../src/gpdma_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpdma_17xx_40xx.d" -MT"src/gpdma_17xx_40xx.o" -MT"src/gpdma_17xx_40xx.d" -o "src/gpdma_17xx_40xx.o" "../src/gpdma_17xx_40xx.c"
+Finished building: ../src/gpdma_17xx_40xx.c
+ 
+Building file: ../src/gpio_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpio_17xx_40xx.d" -MT"src/gpio_17xx_40xx.o" -MT"src/gpio_17xx_40xx.d" -o "src/gpio_17xx_40xx.o" "../src/gpio_17xx_40xx.c"
+Finished building: ../src/gpio_17xx_40xx.c
+ 
+Building file: ../src/gpioint_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpioint_17xx_40xx.d" -MT"src/gpioint_17xx_40xx.o" -MT"src/gpioint_17xx_40xx.d" -o "src/gpioint_17xx_40xx.o" "../src/gpioint_17xx_40xx.c"
+Finished building: ../src/gpioint_17xx_40xx.c
+ 
+Building file: ../src/i2c_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2c_17xx_40xx.d" -MT"src/i2c_17xx_40xx.o" -MT"src/i2c_17xx_40xx.d" -o "src/i2c_17xx_40xx.o" "../src/i2c_17xx_40xx.c"
+Finished building: ../src/i2c_17xx_40xx.c
+ 
+Building file: ../src/i2s_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2s_17xx_40xx.d" -MT"src/i2s_17xx_40xx.o" -MT"src/i2s_17xx_40xx.d" -o "src/i2s_17xx_40xx.o" "../src/i2s_17xx_40xx.c"
+Finished building: ../src/i2s_17xx_40xx.c
+ 
+Building file: ../src/iap.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iap.d" -MT"src/iap.o" -MT"src/iap.d" -o "src/iap.o" "../src/iap.c"
+Finished building: ../src/iap.c
+ 
+Building file: ../src/iocon_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iocon_17xx_40xx.d" -MT"src/iocon_17xx_40xx.o" -MT"src/iocon_17xx_40xx.d" -o "src/iocon_17xx_40xx.o" "../src/iocon_17xx_40xx.c"
+Finished building: ../src/iocon_17xx_40xx.c
+ 
+Building file: ../src/lcd_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lcd_17xx_40xx.d" -MT"src/lcd_17xx_40xx.o" -MT"src/lcd_17xx_40xx.d" -o "src/lcd_17xx_40xx.o" "../src/lcd_17xx_40xx.c"
+Finished building: ../src/lcd_17xx_40xx.c
+ 
+Building file: ../src/pmu_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pmu_17xx_40xx.d" -MT"src/pmu_17xx_40xx.o" -MT"src/pmu_17xx_40xx.d" -o "src/pmu_17xx_40xx.o" "../src/pmu_17xx_40xx.c"
+Finished building: ../src/pmu_17xx_40xx.c
+ 
+Building file: ../src/ring_buffer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ring_buffer.d" -MT"src/ring_buffer.o" -MT"src/ring_buffer.d" -o "src/ring_buffer.o" "../src/ring_buffer.c"
+Finished building: ../src/ring_buffer.c
+ 
+Building file: ../src/ritimer_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ritimer_17xx_40xx.d" -MT"src/ritimer_17xx_40xx.o" -MT"src/ritimer_17xx_40xx.d" -o "src/ritimer_17xx_40xx.o" "../src/ritimer_17xx_40xx.c"
+Finished building: ../src/ritimer_17xx_40xx.c
+ 
+Building file: ../src/rtc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/rtc_17xx_40xx.d" -MT"src/rtc_17xx_40xx.o" -MT"src/rtc_17xx_40xx.d" -o "src/rtc_17xx_40xx.o" "../src/rtc_17xx_40xx.c"
+Finished building: ../src/rtc_17xx_40xx.c
+ 
+Building file: ../src/sdc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdc_17xx_40xx.d" -MT"src/sdc_17xx_40xx.o" -MT"src/sdc_17xx_40xx.d" -o "src/sdc_17xx_40xx.o" "../src/sdc_17xx_40xx.c"
+Finished building: ../src/sdc_17xx_40xx.c
+ 
+Building file: ../src/sdmmc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdmmc_17xx_40xx.d" -MT"src/sdmmc_17xx_40xx.o" -MT"src/sdmmc_17xx_40xx.d" -o "src/sdmmc_17xx_40xx.o" "../src/sdmmc_17xx_40xx.c"
+Finished building: ../src/sdmmc_17xx_40xx.c
+ 
+Building file: ../src/spi_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spi_17xx_40xx.d" -MT"src/spi_17xx_40xx.o" -MT"src/spi_17xx_40xx.d" -o "src/spi_17xx_40xx.o" "../src/spi_17xx_40xx.c"
+../src/spi_17xx_40xx.c: In function 'Chip_SPI_Int_FlushData':
+../src/spi_17xx_40xx.c:138:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t tmp;
+                    ^
+Finished building: ../src/spi_17xx_40xx.c
+ 
+Building file: ../src/ssp_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ssp_17xx_40xx.d" -MT"src/ssp_17xx_40xx.o" -MT"src/ssp_17xx_40xx.d" -o "src/ssp_17xx_40xx.o" "../src/ssp_17xx_40xx.c"
+Finished building: ../src/ssp_17xx_40xx.c
+ 
+Building file: ../src/stopwatch_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/stopwatch_17xx_40xx.d" -MT"src/stopwatch_17xx_40xx.o" -MT"src/stopwatch_17xx_40xx.d" -o "src/stopwatch_17xx_40xx.o" "../src/stopwatch_17xx_40xx.c"
+Finished building: ../src/stopwatch_17xx_40xx.c
+ 
+Building file: ../src/sysctl_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysctl_17xx_40xx.d" -MT"src/sysctl_17xx_40xx.o" -MT"src/sysctl_17xx_40xx.d" -o "src/sysctl_17xx_40xx.o" "../src/sysctl_17xx_40xx.c"
+Finished building: ../src/sysctl_17xx_40xx.c
+ 
+Building file: ../src/sysinit_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit_17xx_40xx.d" -MT"src/sysinit_17xx_40xx.o" -MT"src/sysinit_17xx_40xx.d" -o "src/sysinit_17xx_40xx.o" "../src/sysinit_17xx_40xx.c"
+Finished building: ../src/sysinit_17xx_40xx.c
+ 
+Building file: ../src/timer_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/timer_17xx_40xx.d" -MT"src/timer_17xx_40xx.o" -MT"src/timer_17xx_40xx.d" -o "src/timer_17xx_40xx.o" "../src/timer_17xx_40xx.c"
+Finished building: ../src/timer_17xx_40xx.c
+ 
+Building file: ../src/uart_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart_17xx_40xx.d" -MT"src/uart_17xx_40xx.o" -MT"src/uart_17xx_40xx.d" -o "src/uart_17xx_40xx.o" "../src/uart_17xx_40xx.c"
+Finished building: ../src/uart_17xx_40xx.c
+ 
+Building file: ../src/wwdt_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/wwdt_17xx_40xx.d" -MT"src/wwdt_17xx_40xx.o" -MT"src/wwdt_17xx_40xx.d" -o "src/wwdt_17xx_40xx.o" "../src/wwdt_17xx_40xx.c"
+Finished building: ../src/wwdt_17xx_40xx.c
+ 
+Building target: liblpc_chip_175x_6x.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_chip_175x_6x.a"  ./src/adc_17xx_40xx.o ./src/can_17xx_40xx.o ./src/chip_17xx_40xx.o ./src/clock_17xx_40xx.o ./src/cmp_17xx_40xx.o ./src/crc_17xx_40xx.o ./src/dac_17xx_40xx.o ./src/eeprom_17xx_40xx.o ./src/emc_17xx_40xx.o ./src/enet_17xx_40xx.o ./src/gpdma_17xx_40xx.o ./src/gpio_17xx_40xx.o ./src/gpioint_17xx_40xx.o ./src/i2c_17xx_40xx.o ./src/i2s_17xx_40xx.o ./src/iap.o ./src/iocon_17xx_40xx.o ./src/lcd_17xx_40xx.o ./src/pmu_17xx_40xx.o ./src/ring_buffer.o ./src/ritimer_17xx_40xx.o ./src/rtc_17xx_40xx.o ./src/sdc_17xx_40xx.o ./src/sdmmc_17xx_40xx.o ./src/spi_17xx_40xx.o ./src/ssp_17xx_40xx.o ./src/stopwatch_17xx_40xx.o ./src/sysctl_17xx_40xx.o ./src/sysinit_17xx_40xx.o ./src/timer_17xx_40xx.o ./src/uart_17xx_40xx.o ./src/wwdt_17xx_40xx.o   
+arm-none-eabi-ar: creating liblpc_chip_175x_6x.a
+Finished building target: liblpc_chip_175x_6x.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_chip_175x_6x.a" ; # arm-none-eabi-objdump -h -S "liblpc_chip_175x_6x.a" >"liblpc_chip_175x_6x.lss"
+   text	   data	    bss	    dec	    hex	filename
+    408	      0	      0	    408	    198	adc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   4880	      0	      0	   4880	   1310	can_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     80	      0	      0	     80	     50	chip_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    760	      0	      0	    760	    2f8	clock_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	cmp_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	crc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     56	      0	      0	     56	     38	dac_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	eeprom_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	emc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    528	      0	      4	    532	    214	enet_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1352	     96	      8	   1456	    5b0	gpdma_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	gpio_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	gpioint_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1640	     84	    120	   1844	    734	i2c_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    732	      0	      0	    732	    2dc	i2s_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    408	      0	      0	    408	    198	iap.o (ex liblpc_chip_175x_6x.a)
+    128	      0	      0	    128	     80	iocon_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	lcd_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    156	      0	      0	    156	     9c	pmu_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    360	      0	      0	    360	    168	ring_buffer.o (ex liblpc_chip_175x_6x.a)
+    100	      0	      0	    100	     64	ritimer_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    388	      0	      0	    388	    184	rtc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	sdc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	sdmmc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    472	      0	      0	    472	    1d8	spi_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1136	      0	      0	   1136	    470	ssp_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    172	      0	     12	    184	     b8	stopwatch_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     20	      0	      0	     20	     14	sysctl_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    260	      0	      0	    260	    104	sysinit_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    132	      0	      0	    132	     84	timer_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1044	      0	      1	   1045	    415	uart_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     44	      0	      0	     44	     2c	wwdt_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+ 
+16:56:12 **** Build of configuration Debug for project app_osek_blinky ****
+make pre-build main-build 
+rm ../out/src/*.* ../out/inc/*.* ; php ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php  ../osek/gen/inc/Os_Cfg.h.php  ../osek/gen/src/Os_Cfg.c.php  ../osek/gen/src/Os_Internal_Cfg.c.php  ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/
+
+ciaaFirmware RTOS Generator - Copyright 2008, 2009, Mariano Cerdeiro
+                              Copyright 2014, ACSE & CADIEEL
+         ACSE : http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/ciaa/
+         CADIEEL: http://www.cadieel.org.ar
+
+INFO: the generator was called as follow:
+INFO: ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php ../osek/gen/inc/Os_Cfg.h.php ../osek/gen/src/Os_Cfg.c.php ../osek/gen/src/Os_Internal_Cfg.c.php ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/ 
+INFO: ------ LICENSE START ------
+INFO: This file is part of CIAA Firmware.
+INFO: Redistribution and use in source and binary forms, with or without
+INFO: modification, are permitted provided that the following conditions are met:
+INFO: 1. Redistributions of source code must retain the above copyright notice,
+INFO: this list of conditions and the following disclaimer.
+INFO: 2. Redistributions in binary form must reproduce the above copyright notice,
+INFO: this list of conditions and the following disclaimer in the documentation
+INFO: and/or other materials provided with the distribution.
+INFO: 3. Neither the name of the copyright holder nor the names of its
+INFO: contributors may be used to endorse or promote products derived from this
+INFO: software without specific prior written permission.
+INFO: THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+INFO: AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+INFO: IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+INFO: ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+INFO: LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+INFO: CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+INFO: SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INFO: INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+INFO: CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+INFO: ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+INFO: POSSIBILITY OF SUCH DAMAGE.
+INFO: ------- LICENSE END -------
+INFO: list of configuration files:
+INFO: configuration file 1: ../etc/config.oil
+INFO: list of files to be generated:
+INFO: generated file 1: ../osek/gen/inc/Os_Internal_Cfg.h.php
+INFO: generated file 2: ../osek/gen/inc/Os_Cfg.h.php
+INFO: generated file 3: ../osek/gen/src/Os_Cfg.c.php
+INFO: generated file 4: ../osek/gen/src/Os_Internal_Cfg.c.php
+INFO: generated file 5: ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php
+INFO: generated file 6: ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php
+INFO: output directory: ../out/
+INFO: reading ../etc/config.oil
+INFO: generating ../osek/gen/inc/Os_Internal_Cfg.h.php to ../out//inc/Os_Internal_Cfg.h
+INFO: generating ../osek/gen/inc/Os_Cfg.h.php to ../out//inc/Os_Cfg.h
+INFO: generating ../osek/gen/src/Os_Cfg.c.php to ../out//src/Os_Cfg.c
+INFO: generating ../osek/gen/src/Os_Internal_Cfg.c.php to ../out//src/Os_Internal_Cfg.c
+INFO: generating ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php to ../out//src/cortexM4/Os_Internal_Arch_Cfg.c
+INFO: generating ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php to ../out//inc/cortexM4/Os_Internal_Arch_Cfg.h
+INFO: Generation Finished with WARNINGS: 0 and ERRORS: 0
+ 
+Building file: ../src/cr_startup_lpc175x_6x.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x.d" -MT"src/cr_startup_lpc175x_6x.o" -MT"src/cr_startup_lpc175x_6x.d" -o "src/cr_startup_lpc175x_6x.o" "../src/cr_startup_lpc175x_6x.c"
+Finished building: ../src/cr_startup_lpc175x_6x.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/osek_blinky.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/osek_blinky.d" -MT"src/osek_blinky.o" -MT"src/osek_blinky.d" -o "src/osek_blinky.o" "../src/osek_blinky.c"
+Finished building: ../src/osek_blinky.c
+ 
+Building file: ../src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/sysinit.c
+ 
+Building file: ../out/src/cortexM4/Os_Internal_Arch_Cfg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"out/src/cortexM4/Os_Internal_Arch_Cfg.d" -MT"out/src/cortexM4/Os_Internal_Arch_Cfg.o" -MT"out/src/cortexM4/Os_Internal_Arch_Cfg.d" -o "out/src/cortexM4/Os_Internal_Arch_Cfg.o" "../out/src/cortexM4/Os_Internal_Arch_Cfg.c"
+Finished building: ../out/src/cortexM4/Os_Internal_Arch_Cfg.c
+ 
+Building file: ../out/src/Os_Cfg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"out/src/Os_Cfg.d" -MT"out/src/Os_Cfg.o" -MT"out/src/Os_Cfg.d" -o "out/src/Os_Cfg.o" "../out/src/Os_Cfg.c"
+Finished building: ../out/src/Os_Cfg.c
+ 
+Building file: ../out/src/Os_Internal_Cfg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"out/src/Os_Internal_Cfg.d" -MT"out/src/Os_Internal_Cfg.o" -MT"out/src/Os_Internal_Cfg.d" -o "out/src/Os_Internal_Cfg.o" "../out/src/Os_Internal_Cfg.c"
+Finished building: ../out/src/Os_Internal_Cfg.c
+ 
+Building file: ../osek/src/cortexM4/Os_Arch.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/Os_Arch.d" -MT"osek/src/cortexM4/Os_Arch.o" -MT"osek/src/cortexM4/Os_Arch.d" -o "osek/src/cortexM4/Os_Arch.o" "../osek/src/cortexM4/Os_Arch.c"
+Finished building: ../osek/src/cortexM4/Os_Arch.c
+ 
+Building file: ../osek/src/cortexM4/Os_Internal_Arch.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/Os_Internal_Arch.d" -MT"osek/src/cortexM4/Os_Internal_Arch.o" -MT"osek/src/cortexM4/Os_Internal_Arch.d" -o "osek/src/cortexM4/Os_Internal_Arch.o" "../osek/src/cortexM4/Os_Internal_Arch.c"
+Finished building: ../osek/src/cortexM4/Os_Internal_Arch.c
+ 
+Building file: ../osek/src/cortexM4/PendSV.s
+Invoking: MCU Assembler
+arm-none-eabi-gcc -c -x assembler-with-cpp -D__REDLIB__ -g3 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -o "osek/src/cortexM4/PendSV.o" "../osek/src/cortexM4/PendSV.s"
+Finished building: ../osek/src/cortexM4/PendSV.s
+ 
+Building file: ../osek/src/cortexM4/StartOs_Arch.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/StartOs_Arch.d" -MT"osek/src/cortexM4/StartOs_Arch.o" -MT"osek/src/cortexM4/StartOs_Arch.d" -o "osek/src/cortexM4/StartOs_Arch.o" "../osek/src/cortexM4/StartOs_Arch.c"
+Finished building: ../osek/src/cortexM4/StartOs_Arch.c
+ 
+Building file: ../osek/src/cortexM4/StartOs_Arch_SysTick.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/StartOs_Arch_SysTick.d" -MT"osek/src/cortexM4/StartOs_Arch_SysTick.o" -MT"osek/src/cortexM4/StartOs_Arch_SysTick.d" -o "osek/src/cortexM4/StartOs_Arch_SysTick.o" "../osek/src/cortexM4/StartOs_Arch_SysTick.c"
+Finished building: ../osek/src/cortexM4/StartOs_Arch_SysTick.c
+ 
+Building file: ../osek/src/ActivateTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ActivateTask.d" -MT"osek/src/ActivateTask.o" -MT"osek/src/ActivateTask.d" -o "osek/src/ActivateTask.o" "../osek/src/ActivateTask.c"
+Finished building: ../osek/src/ActivateTask.c
+ 
+Building file: ../osek/src/CancelAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/CancelAlarm.d" -MT"osek/src/CancelAlarm.o" -MT"osek/src/CancelAlarm.d" -o "osek/src/CancelAlarm.o" "../osek/src/CancelAlarm.c"
+Finished building: ../osek/src/CancelAlarm.c
+ 
+Building file: ../osek/src/ChainTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ChainTask.d" -MT"osek/src/ChainTask.o" -MT"osek/src/ChainTask.d" -o "osek/src/ChainTask.o" "../osek/src/ChainTask.c"
+Finished building: ../osek/src/ChainTask.c
+ 
+Building file: ../osek/src/ClearEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ClearEvent.d" -MT"osek/src/ClearEvent.o" -MT"osek/src/ClearEvent.d" -o "osek/src/ClearEvent.o" "../osek/src/ClearEvent.c"
+Finished building: ../osek/src/ClearEvent.c
+ 
+Building file: ../osek/src/GetActiveApplicationMode.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetActiveApplicationMode.d" -MT"osek/src/GetActiveApplicationMode.o" -MT"osek/src/GetActiveApplicationMode.d" -o "osek/src/GetActiveApplicationMode.o" "../osek/src/GetActiveApplicationMode.c"
+Finished building: ../osek/src/GetActiveApplicationMode.c
+ 
+Building file: ../osek/src/GetAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetAlarm.d" -MT"osek/src/GetAlarm.o" -MT"osek/src/GetAlarm.d" -o "osek/src/GetAlarm.o" "../osek/src/GetAlarm.c"
+Finished building: ../osek/src/GetAlarm.c
+ 
+Building file: ../osek/src/GetAlarmBase.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetAlarmBase.d" -MT"osek/src/GetAlarmBase.o" -MT"osek/src/GetAlarmBase.d" -o "osek/src/GetAlarmBase.o" "../osek/src/GetAlarmBase.c"
+Finished building: ../osek/src/GetAlarmBase.c
+ 
+Building file: ../osek/src/GetEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetEvent.d" -MT"osek/src/GetEvent.o" -MT"osek/src/GetEvent.d" -o "osek/src/GetEvent.o" "../osek/src/GetEvent.c"
+Finished building: ../osek/src/GetEvent.c
+ 
+Building file: ../osek/src/GetResource.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetResource.d" -MT"osek/src/GetResource.o" -MT"osek/src/GetResource.d" -o "osek/src/GetResource.o" "../osek/src/GetResource.c"
+Finished building: ../osek/src/GetResource.c
+ 
+Building file: ../osek/src/GetTaskID.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetTaskID.d" -MT"osek/src/GetTaskID.o" -MT"osek/src/GetTaskID.d" -o "osek/src/GetTaskID.o" "../osek/src/GetTaskID.c"
+Finished building: ../osek/src/GetTaskID.c
+ 
+Building file: ../osek/src/GetTaskState.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetTaskState.d" -MT"osek/src/GetTaskState.o" -MT"osek/src/GetTaskState.d" -o "osek/src/GetTaskState.o" "../osek/src/GetTaskState.c"
+Finished building: ../osek/src/GetTaskState.c
+ 
+Building file: ../osek/src/Os.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/Os.d" -MT"osek/src/Os.o" -MT"osek/src/Os.d" -o "osek/src/Os.o" "../osek/src/Os.c"
+Finished building: ../osek/src/Os.c
+ 
+Building file: ../osek/src/Os_Internal.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/Os_Internal.d" -MT"osek/src/Os_Internal.o" -MT"osek/src/Os_Internal.d" -o "osek/src/Os_Internal.o" "../osek/src/Os_Internal.c"
+Finished building: ../osek/src/Os_Internal.c
+ 
+Building file: ../osek/src/ReleaseResource.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ReleaseResource.d" -MT"osek/src/ReleaseResource.o" -MT"osek/src/ReleaseResource.d" -o "osek/src/ReleaseResource.o" "../osek/src/ReleaseResource.c"
+Finished building: ../osek/src/ReleaseResource.c
+ 
+Building file: ../osek/src/Schedule.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/Schedule.d" -MT"osek/src/Schedule.o" -MT"osek/src/Schedule.d" -o "osek/src/Schedule.o" "../osek/src/Schedule.c"
+Finished building: ../osek/src/Schedule.c
+ 
+Building file: ../osek/src/SetAbsAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/SetAbsAlarm.d" -MT"osek/src/SetAbsAlarm.o" -MT"osek/src/SetAbsAlarm.d" -o "osek/src/SetAbsAlarm.o" "../osek/src/SetAbsAlarm.c"
+Finished building: ../osek/src/SetAbsAlarm.c
+ 
+Building file: ../osek/src/SetEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/SetEvent.d" -MT"osek/src/SetEvent.o" -MT"osek/src/SetEvent.d" -o "osek/src/SetEvent.o" "../osek/src/SetEvent.c"
+Finished building: ../osek/src/SetEvent.c
+ 
+Building file: ../osek/src/SetRelAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/SetRelAlarm.d" -MT"osek/src/SetRelAlarm.o" -MT"osek/src/SetRelAlarm.d" -o "osek/src/SetRelAlarm.o" "../osek/src/SetRelAlarm.c"
+Finished building: ../osek/src/SetRelAlarm.c
+ 
+Building file: ../osek/src/ShutdownOS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ShutdownOS.d" -MT"osek/src/ShutdownOS.o" -MT"osek/src/ShutdownOS.d" -o "osek/src/ShutdownOS.o" "../osek/src/ShutdownOS.c"
+Finished building: ../osek/src/ShutdownOS.c
+ 
+Building file: ../osek/src/StartOS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/StartOS.d" -MT"osek/src/StartOS.o" -MT"osek/src/StartOS.d" -o "osek/src/StartOS.o" "../osek/src/StartOS.c"
+Finished building: ../osek/src/StartOS.c
+ 
+Building file: ../osek/src/TerminateTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/TerminateTask.d" -MT"osek/src/TerminateTask.o" -MT"osek/src/TerminateTask.d" -o "osek/src/TerminateTask.o" "../osek/src/TerminateTask.c"
+Finished building: ../osek/src/TerminateTask.c
+ 
+Building file: ../osek/src/WaitEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/WaitEvent.d" -MT"osek/src/WaitEvent.o" -MT"osek/src/WaitEvent.d" -o "osek/src/WaitEvent.o" "../osek/src/WaitEvent.c"
+Finished building: ../osek/src/WaitEvent.c
+ 
+Building target: app_osek_blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/Debug" -L"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/Debug" -mcpu=cortex-m3 -mthumb -T app_osek_blinky.ld -o "app_osek_blinky.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/osek_blinky.o ./src/sysinit.o  ./out/src/cortexM4/Os_Internal_Arch_Cfg.o  ./out/src/Os_Cfg.o ./out/src/Os_Internal_Cfg.o  ./osek/src/cortexM4/Os_Arch.o ./osek/src/cortexM4/Os_Internal_Arch.o ./osek/src/cortexM4/PendSV.o ./osek/src/cortexM4/StartOs_Arch.o ./osek/src/cortexM4/StartOs_Arch_SysTick.o  ./osek/src/ActivateTask.o ./osek/src/CancelAlarm.o ./osek/src/ChainTask.o ./osek/src/ClearEvent.o ./osek/src/GetActiveApplicationMode.o ./osek/src/GetAlarm.o ./osek/src/GetAlarmBase.o ./osek/src/GetEvent.o ./osek/src/GetResource.o ./osek/src/GetTaskID.o ./osek/src/GetTaskState.o ./osek/src/Os.o ./osek/src/Os_Internal.o ./osek/src/ReleaseResource.o ./osek/src/Schedule.o ./osek/src/SetAbsAlarm.o ./osek/src/SetEvent.o ./osek/src/SetRelAlarm.o ./osek/src/ShutdownOS.o ./osek/src/StartOS.o ./osek/src/TerminateTask.o ./osek/src/WaitEvent.o   -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x
+Finished building target: app_osek_blinky.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "app_osek_blinky.axf"; # arm-none-eabi-objcopy -v -O binary "app_osek_blinky.axf" "app_osek_blinky.bin" ; # checksum -p LPC1769 -d "app_osek_blinky.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14408	     12	   2592	  17012	   4274	app_osek_blinky.axf
+ 
+16:56:25 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1769 ****
+make all 
+make: Nothing to be done for `all'.
+16:56:26 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make all 
+make: Nothing to be done for `all'.
+16:56:26 **** Incremental Build of configuration Debug for project app_osek_blinky ****
+make pre-build main-build 
+rm ../out/src/*.* ../out/inc/*.* ; php ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php  ../osek/gen/inc/Os_Cfg.h.php  ../osek/gen/src/Os_Cfg.c.php  ../osek/gen/src/Os_Internal_Cfg.c.php  ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/
+
+ciaaFirmware RTOS Generator - Copyright 2008, 2009, Mariano Cerdeiro
+                              Copyright 2014, ACSE & CADIEEL
+         ACSE : http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/ciaa/
+         CADIEEL: http://www.cadieel.org.ar
+
+INFO: the generator was called as follow:
+INFO: ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php ../osek/gen/inc/Os_Cfg.h.php ../osek/gen/src/Os_Cfg.c.php ../osek/gen/src/Os_Internal_Cfg.c.php ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/ 
+INFO: ------ LICENSE START ------
+INFO: This file is part of CIAA Firmware.
+INFO: Redistribution and use in source and binary forms, with or without
+INFO: modification, are permitted provided that the following conditions are met:
+INFO: 1. Redistributions of source code must retain the above copyright notice,
+INFO: this list of conditions and the following disclaimer.
+INFO: 2. Redistributions in binary form must reproduce the above copyright notice,
+INFO: this list of conditions and the following disclaimer in the documentation
+INFO: and/or other materials provided with the distribution.
+INFO: 3. Neither the name of the copyright holder nor the names of its
+INFO: contributors may be used to endorse or promote products derived from this
+INFO: software without specific prior written permission.
+INFO: THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+INFO: AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+INFO: IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+INFO: ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+INFO: LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+INFO: CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+INFO: SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INFO: INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+INFO: CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+INFO: ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+INFO: POSSIBILITY OF SUCH DAMAGE.
+INFO: ------- LICENSE END -------
+INFO: list of configuration files:
+INFO: configuration file 1: ../etc/config.oil
+INFO: list of files to be generated:
+INFO: generated file 1: ../osek/gen/inc/Os_Internal_Cfg.h.php
+INFO: generated file 2: ../osek/gen/inc/Os_Cfg.h.php
+INFO: generated file 3: ../osek/gen/src/Os_Cfg.c.php
+INFO: generated file 4: ../osek/gen/src/Os_Internal_Cfg.c.php
+INFO: generated file 5: ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php
+INFO: generated file 6: ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php
+INFO: output directory: ../out/
+INFO: reading ../etc/config.oil
+INFO: generating ../osek/gen/inc/Os_Internal_Cfg.h.php to ../out//inc/Os_Internal_Cfg.h
+INFO: generating ../osek/gen/inc/Os_Cfg.h.php to ../out//inc/Os_Cfg.h
+INFO: generating ../osek/gen/src/Os_Cfg.c.php to ../out//src/Os_Cfg.c
+INFO: generating ../osek/gen/src/Os_Internal_Cfg.c.php to ../out//src/Os_Internal_Cfg.c
+INFO: generating ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php to ../out//src/cortexM4/Os_Internal_Arch_Cfg.c
+INFO: generating ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php to ../out//inc/cortexM4/Os_Internal_Arch_Cfg.h
+INFO: Generation Finished with WARNINGS: 0 and ERRORS: 0
+ 
+make: Nothing to be done for `main-build'.
+16:57:03 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1769 ****
+make all 
+make: Nothing to be done for `all'.
+16:57:04 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make all 
+make: Nothing to be done for `all'.
+16:57:04 **** Incremental Build of configuration Debug for project app_osek_blinky ****
+make pre-build main-build 
+rm ../out/src/*.* ../out/inc/*.* ; php ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php  ../osek/gen/inc/Os_Cfg.h.php  ../osek/gen/src/Os_Cfg.c.php  ../osek/gen/src/Os_Internal_Cfg.c.php  ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/
+
+ciaaFirmware RTOS Generator - Copyright 2008, 2009, Mariano Cerdeiro
+                              Copyright 2014, ACSE & CADIEEL
+         ACSE : http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/ciaa/
+         CADIEEL: http://www.cadieel.org.ar
+
+INFO: the generator was called as follow:
+INFO: ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php ../osek/gen/inc/Os_Cfg.h.php ../osek/gen/src/Os_Cfg.c.php ../osek/gen/src/Os_Internal_Cfg.c.php ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/ 
+INFO: ------ LICENSE START ------
+INFO: This file is part of CIAA Firmware.
+INFO: Redistribution and use in source and binary forms, with or without
+INFO: modification, are permitted provided that the following conditions are met:
+INFO: 1. Redistributions of source code must retain the above copyright notice,
+INFO: this list of conditions and the following disclaimer.
+INFO: 2. Redistributions in binary form must reproduce the above copyright notice,
+INFO: this list of conditions and the following disclaimer in the documentation
+INFO: and/or other materials provided with the distribution.
+INFO: 3. Neither the name of the copyright holder nor the names of its
+INFO: contributors may be used to endorse or promote products derived from this
+INFO: software without specific prior written permission.
+INFO: THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+INFO: AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+INFO: IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+INFO: ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+INFO: LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+INFO: CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+INFO: SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INFO: INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+INFO: CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+INFO: ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+INFO: POSSIBILITY OF SUCH DAMAGE.
+INFO: ------- LICENSE END -------
+INFO: list of configuration files:
+INFO: configuration file 1: ../etc/config.oil
+INFO: list of files to be generated:
+INFO: generated file 1: ../osek/gen/inc/Os_Internal_Cfg.h.php
+INFO: generated file 2: ../osek/gen/inc/Os_Cfg.h.php
+INFO: generated file 3: ../osek/gen/src/Os_Cfg.c.php
+INFO: generated file 4: ../osek/gen/src/Os_Internal_Cfg.c.php
+INFO: generated file 5: ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php
+INFO: generated file 6: ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php
+INFO: output directory: ../out/
+INFO: reading ../etc/config.oil
+INFO: generating ../osek/gen/inc/Os_Internal_Cfg.h.php to ../out//inc/Os_Internal_Cfg.h
+INFO: generating ../osek/gen/inc/Os_Cfg.h.php to ../out//inc/Os_Cfg.h
+INFO: generating ../osek/gen/src/Os_Cfg.c.php to ../out//src/Os_Cfg.c
+INFO: generating ../osek/gen/src/Os_Internal_Cfg.c.php to ../out//src/Os_Internal_Cfg.c
+INFO: generating ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php to ../out//src/cortexM4/Os_Internal_Arch_Cfg.c
+INFO: generating ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php to ../out//inc/cortexM4/Os_Internal_Arch_Cfg.h
+INFO: Generation Finished with WARNINGS: 0 and ERRORS: 0
+ 
+Building file: ../src/osek_blinky.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/osek_blinky.d" -MT"src/osek_blinky.o" -MT"src/osek_blinky.d" -o "src/osek_blinky.o" "../src/osek_blinky.c"
+Finished building: ../src/osek_blinky.c
+ 
+Building file: ../out/src/cortexM4/Os_Internal_Arch_Cfg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"out/src/cortexM4/Os_Internal_Arch_Cfg.d" -MT"out/src/cortexM4/Os_Internal_Arch_Cfg.o" -MT"out/src/cortexM4/Os_Internal_Arch_Cfg.d" -o "out/src/cortexM4/Os_Internal_Arch_Cfg.o" "../out/src/cortexM4/Os_Internal_Arch_Cfg.c"
+Finished building: ../out/src/cortexM4/Os_Internal_Arch_Cfg.c
+ 
+Building file: ../out/src/Os_Cfg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"out/src/Os_Cfg.d" -MT"out/src/Os_Cfg.o" -MT"out/src/Os_Cfg.d" -o "out/src/Os_Cfg.o" "../out/src/Os_Cfg.c"
+Finished building: ../out/src/Os_Cfg.c
+ 
+Building file: ../out/src/Os_Internal_Cfg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"out/src/Os_Internal_Cfg.d" -MT"out/src/Os_Internal_Cfg.o" -MT"out/src/Os_Internal_Cfg.d" -o "out/src/Os_Internal_Cfg.o" "../out/src/Os_Internal_Cfg.c"
+Finished building: ../out/src/Os_Internal_Cfg.c
+ 
+Building file: ../osek/src/cortexM4/Os_Arch.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/Os_Arch.d" -MT"osek/src/cortexM4/Os_Arch.o" -MT"osek/src/cortexM4/Os_Arch.d" -o "osek/src/cortexM4/Os_Arch.o" "../osek/src/cortexM4/Os_Arch.c"
+Finished building: ../osek/src/cortexM4/Os_Arch.c
+ 
+Building file: ../osek/src/cortexM4/Os_Internal_Arch.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/Os_Internal_Arch.d" -MT"osek/src/cortexM4/Os_Internal_Arch.o" -MT"osek/src/cortexM4/Os_Internal_Arch.d" -o "osek/src/cortexM4/Os_Internal_Arch.o" "../osek/src/cortexM4/Os_Internal_Arch.c"
+Finished building: ../osek/src/cortexM4/Os_Internal_Arch.c
+ 
+Building file: ../osek/src/cortexM4/StartOs_Arch.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/StartOs_Arch.d" -MT"osek/src/cortexM4/StartOs_Arch.o" -MT"osek/src/cortexM4/StartOs_Arch.d" -o "osek/src/cortexM4/StartOs_Arch.o" "../osek/src/cortexM4/StartOs_Arch.c"
+Finished building: ../osek/src/cortexM4/StartOs_Arch.c
+ 
+Building file: ../osek/src/ActivateTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ActivateTask.d" -MT"osek/src/ActivateTask.o" -MT"osek/src/ActivateTask.d" -o "osek/src/ActivateTask.o" "../osek/src/ActivateTask.c"
+Finished building: ../osek/src/ActivateTask.c
+ 
+Building file: ../osek/src/CancelAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/CancelAlarm.d" -MT"osek/src/CancelAlarm.o" -MT"osek/src/CancelAlarm.d" -o "osek/src/CancelAlarm.o" "../osek/src/CancelAlarm.c"
+Finished building: ../osek/src/CancelAlarm.c
+ 
+Building file: ../osek/src/ChainTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ChainTask.d" -MT"osek/src/ChainTask.o" -MT"osek/src/ChainTask.d" -o "osek/src/ChainTask.o" "../osek/src/ChainTask.c"
+Finished building: ../osek/src/ChainTask.c
+ 
+Building file: ../osek/src/ClearEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ClearEvent.d" -MT"osek/src/ClearEvent.o" -MT"osek/src/ClearEvent.d" -o "osek/src/ClearEvent.o" "../osek/src/ClearEvent.c"
+Finished building: ../osek/src/ClearEvent.c
+ 
+Building file: ../osek/src/GetActiveApplicationMode.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetActiveApplicationMode.d" -MT"osek/src/GetActiveApplicationMode.o" -MT"osek/src/GetActiveApplicationMode.d" -o "osek/src/GetActiveApplicationMode.o" "../osek/src/GetActiveApplicationMode.c"
+Finished building: ../osek/src/GetActiveApplicationMode.c
+ 
+Building file: ../osek/src/GetAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetAlarm.d" -MT"osek/src/GetAlarm.o" -MT"osek/src/GetAlarm.d" -o "osek/src/GetAlarm.o" "../osek/src/GetAlarm.c"
+Finished building: ../osek/src/GetAlarm.c
+ 
+Building file: ../osek/src/GetAlarmBase.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetAlarmBase.d" -MT"osek/src/GetAlarmBase.o" -MT"osek/src/GetAlarmBase.d" -o "osek/src/GetAlarmBase.o" "../osek/src/GetAlarmBase.c"
+Finished building: ../osek/src/GetAlarmBase.c
+ 
+Building file: ../osek/src/GetEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetEvent.d" -MT"osek/src/GetEvent.o" -MT"osek/src/GetEvent.d" -o "osek/src/GetEvent.o" "../osek/src/GetEvent.c"
+Finished building: ../osek/src/GetEvent.c
+ 
+Building file: ../osek/src/GetResource.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetResource.d" -MT"osek/src/GetResource.o" -MT"osek/src/GetResource.d" -o "osek/src/GetResource.o" "../osek/src/GetResource.c"
+Finished building: ../osek/src/GetResource.c
+ 
+Building file: ../osek/src/GetTaskID.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetTaskID.d" -MT"osek/src/GetTaskID.o" -MT"osek/src/GetTaskID.d" -o "osek/src/GetTaskID.o" "../osek/src/GetTaskID.c"
+Finished building: ../osek/src/GetTaskID.c
+ 
+Building file: ../osek/src/GetTaskState.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetTaskState.d" -MT"osek/src/GetTaskState.o" -MT"osek/src/GetTaskState.d" -o "osek/src/GetTaskState.o" "../osek/src/GetTaskState.c"
+Finished building: ../osek/src/GetTaskState.c
+ 
+Building file: ../osek/src/Os.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/Os.d" -MT"osek/src/Os.o" -MT"osek/src/Os.d" -o "osek/src/Os.o" "../osek/src/Os.c"
+Finished building: ../osek/src/Os.c
+ 
+Building file: ../osek/src/Os_Internal.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/Os_Internal.d" -MT"osek/src/Os_Internal.o" -MT"osek/src/Os_Internal.d" -o "osek/src/Os_Internal.o" "../osek/src/Os_Internal.c"
+Finished building: ../osek/src/Os_Internal.c
+ 
+Building file: ../osek/src/ReleaseResource.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ReleaseResource.d" -MT"osek/src/ReleaseResource.o" -MT"osek/src/ReleaseResource.d" -o "osek/src/ReleaseResource.o" "../osek/src/ReleaseResource.c"
+Finished building: ../osek/src/ReleaseResource.c
+ 
+Building file: ../osek/src/Schedule.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/Schedule.d" -MT"osek/src/Schedule.o" -MT"osek/src/Schedule.d" -o "osek/src/Schedule.o" "../osek/src/Schedule.c"
+Finished building: ../osek/src/Schedule.c
+ 
+Building file: ../osek/src/SetAbsAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/SetAbsAlarm.d" -MT"osek/src/SetAbsAlarm.o" -MT"osek/src/SetAbsAlarm.d" -o "osek/src/SetAbsAlarm.o" "../osek/src/SetAbsAlarm.c"
+Finished building: ../osek/src/SetAbsAlarm.c
+ 
+Building file: ../osek/src/SetEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/SetEvent.d" -MT"osek/src/SetEvent.o" -MT"osek/src/SetEvent.d" -o "osek/src/SetEvent.o" "../osek/src/SetEvent.c"
+Finished building: ../osek/src/SetEvent.c
+ 
+Building file: ../osek/src/SetRelAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/SetRelAlarm.d" -MT"osek/src/SetRelAlarm.o" -MT"osek/src/SetRelAlarm.d" -o "osek/src/SetRelAlarm.o" "../osek/src/SetRelAlarm.c"
+Finished building: ../osek/src/SetRelAlarm.c
+ 
+Building file: ../osek/src/ShutdownOS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ShutdownOS.d" -MT"osek/src/ShutdownOS.o" -MT"osek/src/ShutdownOS.d" -o "osek/src/ShutdownOS.o" "../osek/src/ShutdownOS.c"
+Finished building: ../osek/src/ShutdownOS.c
+ 
+Building file: ../osek/src/StartOS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/StartOS.d" -MT"osek/src/StartOS.o" -MT"osek/src/StartOS.d" -o "osek/src/StartOS.o" "../osek/src/StartOS.c"
+Finished building: ../osek/src/StartOS.c
+ 
+Building file: ../osek/src/TerminateTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/TerminateTask.d" -MT"osek/src/TerminateTask.o" -MT"osek/src/TerminateTask.d" -o "osek/src/TerminateTask.o" "../osek/src/TerminateTask.c"
+Finished building: ../osek/src/TerminateTask.c
+ 
+Building file: ../osek/src/WaitEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/WaitEvent.d" -MT"osek/src/WaitEvent.o" -MT"osek/src/WaitEvent.d" -o "osek/src/WaitEvent.o" "../osek/src/WaitEvent.c"
+Finished building: ../osek/src/WaitEvent.c
+ 
+Building target: app_osek_blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/Debug" -L"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/Debug" -mcpu=cortex-m3 -mthumb -T app_osek_blinky.ld -o "app_osek_blinky.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/osek_blinky.o ./src/sysinit.o  ./out/src/cortexM4/Os_Internal_Arch_Cfg.o  ./out/src/Os_Cfg.o ./out/src/Os_Internal_Cfg.o  ./osek/src/cortexM4/Os_Arch.o ./osek/src/cortexM4/Os_Internal_Arch.o ./osek/src/cortexM4/PendSV.o ./osek/src/cortexM4/StartOs_Arch.o ./osek/src/cortexM4/StartOs_Arch_SysTick.o  ./osek/src/ActivateTask.o ./osek/src/CancelAlarm.o ./osek/src/ChainTask.o ./osek/src/ClearEvent.o ./osek/src/GetActiveApplicationMode.o ./osek/src/GetAlarm.o ./osek/src/GetAlarmBase.o ./osek/src/GetEvent.o ./osek/src/GetResource.o ./osek/src/GetTaskID.o ./osek/src/GetTaskState.o ./osek/src/Os.o ./osek/src/Os_Internal.o ./osek/src/ReleaseResource.o ./osek/src/Schedule.o ./osek/src/SetAbsAlarm.o ./osek/src/SetEvent.o ./osek/src/SetRelAlarm.o ./osek/src/ShutdownOS.o ./osek/src/StartOS.o ./osek/src/TerminateTask.o ./osek/src/WaitEvent.o   -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x
+Finished building target: app_osek_blinky.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "app_osek_blinky.axf"; # arm-none-eabi-objcopy -v -O binary "app_osek_blinky.axf" "app_osek_blinky.bin" ; # checksum -p LPC1769 -d "app_osek_blinky.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14408	     12	   2592	  17012	   4274	app_osek_blinky.axf
+ 
+16:58:54 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1769 ****
+make all 
+Building file: ../src/board.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/board.d" -MT"src/board.o" -MT"src/board.d" -o "src/board.o" "../src/board.c"
+../src/board.c: In function 'Board_I2C_Init':
+../src/board.c:267:2: warning: enumeration value 'I2C_NUM_INTERFACE' not handled in switch [-Wswitch]
+  switch (id) {
+  ^
+Finished building: ../src/board.c
+ 
+Building file: ../src/board_sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/board_sysinit.d" -MT"src/board_sysinit.o" -MT"src/board_sysinit.d" -o "src/board_sysinit.o" "../src/board_sysinit.c"
+Finished building: ../src/board_sysinit.c
+ 
+Building file: ../src/lpc_phy_smsc87x0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lpc_phy_smsc87x0.d" -MT"src/lpc_phy_smsc87x0.o" -MT"src/lpc_phy_smsc87x0.d" -o "src/lpc_phy_smsc87x0.o" "../src/lpc_phy_smsc87x0.c"
+Finished building: ../src/lpc_phy_smsc87x0.c
+ 
+Building target: liblpc_board_nxp_lpcxpresso_1769.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_board_nxp_lpcxpresso_1769.a"  ./src/board.o ./src/board_sysinit.o ./src/lpc_phy_smsc87x0.o   
+arm-none-eabi-ar: creating liblpc_board_nxp_lpcxpresso_1769.a
+Finished building target: liblpc_board_nxp_lpcxpresso_1769.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_board_nxp_lpcxpresso_1769.a" ; # arm-none-eabi-objdump -h -S "liblpc_board_nxp_lpcxpresso_1769.a" >"liblpc_board_nxp_lpcxpresso_1769.lss"
+   text	   data	    bss	    dec	    hex	filename
+   1036	      0	      0	   1036	    40c	board.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+    156	      0	      0	    156	     9c	board_sysinit.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+    576	      0	     18	    594	    252	lpc_phy_smsc87x0.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+ 
+16:58:55 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make all 
+Building file: ../src/adc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_17xx_40xx.d" -MT"src/adc_17xx_40xx.o" -MT"src/adc_17xx_40xx.d" -o "src/adc_17xx_40xx.o" "../src/adc_17xx_40xx.c"
+Finished building: ../src/adc_17xx_40xx.c
+ 
+Building file: ../src/can_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/can_17xx_40xx.d" -MT"src/can_17xx_40xx.o" -MT"src/can_17xx_40xx.d" -o "src/can_17xx_40xx.o" "../src/can_17xx_40xx.c"
+../src/can_17xx_40xx.c: In function 'Chip_CAN_Init':
+../src/can_17xx_40xx.c:751:20: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t i;
+                    ^
+Finished building: ../src/can_17xx_40xx.c
+ 
+Building file: ../src/chip_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/chip_17xx_40xx.d" -MT"src/chip_17xx_40xx.o" -MT"src/chip_17xx_40xx.d" -o "src/chip_17xx_40xx.o" "../src/chip_17xx_40xx.c"
+Finished building: ../src/chip_17xx_40xx.c
+ 
+Building file: ../src/clock_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/clock_17xx_40xx.d" -MT"src/clock_17xx_40xx.o" -MT"src/clock_17xx_40xx.d" -o "src/clock_17xx_40xx.o" "../src/clock_17xx_40xx.c"
+../src/clock_17xx_40xx.c: In function 'Chip_Clock_GetSYSCLKRate':
+../src/clock_17xx_40xx.c:320:2: warning: enumeration value 'SYSCTL_PLLCLKSRC_RESERVED2' not handled in switch [-Wswitch]
+  switch (Chip_Clock_GetMainPLLSource()) {
+  ^
+Finished building: ../src/clock_17xx_40xx.c
+ 
+Building file: ../src/cmp_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cmp_17xx_40xx.d" -MT"src/cmp_17xx_40xx.o" -MT"src/cmp_17xx_40xx.d" -o "src/cmp_17xx_40xx.o" "../src/cmp_17xx_40xx.c"
+Finished building: ../src/cmp_17xx_40xx.c
+ 
+Building file: ../src/crc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crc_17xx_40xx.d" -MT"src/crc_17xx_40xx.o" -MT"src/crc_17xx_40xx.d" -o "src/crc_17xx_40xx.o" "../src/crc_17xx_40xx.c"
+Finished building: ../src/crc_17xx_40xx.c
+ 
+Building file: ../src/dac_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/dac_17xx_40xx.d" -MT"src/dac_17xx_40xx.o" -MT"src/dac_17xx_40xx.d" -o "src/dac_17xx_40xx.o" "../src/dac_17xx_40xx.c"
+Finished building: ../src/dac_17xx_40xx.c
+ 
+Building file: ../src/eeprom_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/eeprom_17xx_40xx.d" -MT"src/eeprom_17xx_40xx.o" -MT"src/eeprom_17xx_40xx.d" -o "src/eeprom_17xx_40xx.o" "../src/eeprom_17xx_40xx.c"
+Finished building: ../src/eeprom_17xx_40xx.c
+ 
+Building file: ../src/emc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/emc_17xx_40xx.d" -MT"src/emc_17xx_40xx.o" -MT"src/emc_17xx_40xx.d" -o "src/emc_17xx_40xx.o" "../src/emc_17xx_40xx.c"
+Finished building: ../src/emc_17xx_40xx.c
+ 
+Building file: ../src/enet_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/enet_17xx_40xx.d" -MT"src/enet_17xx_40xx.o" -MT"src/enet_17xx_40xx.d" -o "src/enet_17xx_40xx.o" "../src/enet_17xx_40xx.c"
+Finished building: ../src/enet_17xx_40xx.c
+ 
+Building file: ../src/gpdma_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpdma_17xx_40xx.d" -MT"src/gpdma_17xx_40xx.o" -MT"src/gpdma_17xx_40xx.d" -o "src/gpdma_17xx_40xx.o" "../src/gpdma_17xx_40xx.c"
+Finished building: ../src/gpdma_17xx_40xx.c
+ 
+Building file: ../src/gpio_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpio_17xx_40xx.d" -MT"src/gpio_17xx_40xx.o" -MT"src/gpio_17xx_40xx.d" -o "src/gpio_17xx_40xx.o" "../src/gpio_17xx_40xx.c"
+Finished building: ../src/gpio_17xx_40xx.c
+ 
+Building file: ../src/gpioint_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpioint_17xx_40xx.d" -MT"src/gpioint_17xx_40xx.o" -MT"src/gpioint_17xx_40xx.d" -o "src/gpioint_17xx_40xx.o" "../src/gpioint_17xx_40xx.c"
+Finished building: ../src/gpioint_17xx_40xx.c
+ 
+Building file: ../src/i2c_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2c_17xx_40xx.d" -MT"src/i2c_17xx_40xx.o" -MT"src/i2c_17xx_40xx.d" -o "src/i2c_17xx_40xx.o" "../src/i2c_17xx_40xx.c"
+Finished building: ../src/i2c_17xx_40xx.c
+ 
+Building file: ../src/i2s_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2s_17xx_40xx.d" -MT"src/i2s_17xx_40xx.o" -MT"src/i2s_17xx_40xx.d" -o "src/i2s_17xx_40xx.o" "../src/i2s_17xx_40xx.c"
+Finished building: ../src/i2s_17xx_40xx.c
+ 
+Building file: ../src/iap.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iap.d" -MT"src/iap.o" -MT"src/iap.d" -o "src/iap.o" "../src/iap.c"
+Finished building: ../src/iap.c
+ 
+Building file: ../src/iocon_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iocon_17xx_40xx.d" -MT"src/iocon_17xx_40xx.o" -MT"src/iocon_17xx_40xx.d" -o "src/iocon_17xx_40xx.o" "../src/iocon_17xx_40xx.c"
+Finished building: ../src/iocon_17xx_40xx.c
+ 
+Building file: ../src/lcd_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lcd_17xx_40xx.d" -MT"src/lcd_17xx_40xx.o" -MT"src/lcd_17xx_40xx.d" -o "src/lcd_17xx_40xx.o" "../src/lcd_17xx_40xx.c"
+Finished building: ../src/lcd_17xx_40xx.c
+ 
+Building file: ../src/pmu_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pmu_17xx_40xx.d" -MT"src/pmu_17xx_40xx.o" -MT"src/pmu_17xx_40xx.d" -o "src/pmu_17xx_40xx.o" "../src/pmu_17xx_40xx.c"
+Finished building: ../src/pmu_17xx_40xx.c
+ 
+Building file: ../src/ring_buffer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ring_buffer.d" -MT"src/ring_buffer.o" -MT"src/ring_buffer.d" -o "src/ring_buffer.o" "../src/ring_buffer.c"
+Finished building: ../src/ring_buffer.c
+ 
+Building file: ../src/ritimer_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ritimer_17xx_40xx.d" -MT"src/ritimer_17xx_40xx.o" -MT"src/ritimer_17xx_40xx.d" -o "src/ritimer_17xx_40xx.o" "../src/ritimer_17xx_40xx.c"
+Finished building: ../src/ritimer_17xx_40xx.c
+ 
+Building file: ../src/rtc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/rtc_17xx_40xx.d" -MT"src/rtc_17xx_40xx.o" -MT"src/rtc_17xx_40xx.d" -o "src/rtc_17xx_40xx.o" "../src/rtc_17xx_40xx.c"
+Finished building: ../src/rtc_17xx_40xx.c
+ 
+Building file: ../src/sdc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdc_17xx_40xx.d" -MT"src/sdc_17xx_40xx.o" -MT"src/sdc_17xx_40xx.d" -o "src/sdc_17xx_40xx.o" "../src/sdc_17xx_40xx.c"
+Finished building: ../src/sdc_17xx_40xx.c
+ 
+Building file: ../src/sdmmc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdmmc_17xx_40xx.d" -MT"src/sdmmc_17xx_40xx.o" -MT"src/sdmmc_17xx_40xx.d" -o "src/sdmmc_17xx_40xx.o" "../src/sdmmc_17xx_40xx.c"
+Finished building: ../src/sdmmc_17xx_40xx.c
+ 
+Building file: ../src/spi_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spi_17xx_40xx.d" -MT"src/spi_17xx_40xx.o" -MT"src/spi_17xx_40xx.d" -o "src/spi_17xx_40xx.o" "../src/spi_17xx_40xx.c"
+../src/spi_17xx_40xx.c: In function 'Chip_SPI_Int_FlushData':
+../src/spi_17xx_40xx.c:138:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t tmp;
+                    ^
+Finished building: ../src/spi_17xx_40xx.c
+ 
+Building file: ../src/ssp_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ssp_17xx_40xx.d" -MT"src/ssp_17xx_40xx.o" -MT"src/ssp_17xx_40xx.d" -o "src/ssp_17xx_40xx.o" "../src/ssp_17xx_40xx.c"
+Finished building: ../src/ssp_17xx_40xx.c
+ 
+Building file: ../src/stopwatch_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/stopwatch_17xx_40xx.d" -MT"src/stopwatch_17xx_40xx.o" -MT"src/stopwatch_17xx_40xx.d" -o "src/stopwatch_17xx_40xx.o" "../src/stopwatch_17xx_40xx.c"
+Finished building: ../src/stopwatch_17xx_40xx.c
+ 
+Building file: ../src/sysctl_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysctl_17xx_40xx.d" -MT"src/sysctl_17xx_40xx.o" -MT"src/sysctl_17xx_40xx.d" -o "src/sysctl_17xx_40xx.o" "../src/sysctl_17xx_40xx.c"
+Finished building: ../src/sysctl_17xx_40xx.c
+ 
+Building file: ../src/sysinit_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit_17xx_40xx.d" -MT"src/sysinit_17xx_40xx.o" -MT"src/sysinit_17xx_40xx.d" -o "src/sysinit_17xx_40xx.o" "../src/sysinit_17xx_40xx.c"
+Finished building: ../src/sysinit_17xx_40xx.c
+ 
+Building file: ../src/timer_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/timer_17xx_40xx.d" -MT"src/timer_17xx_40xx.o" -MT"src/timer_17xx_40xx.d" -o "src/timer_17xx_40xx.o" "../src/timer_17xx_40xx.c"
+Finished building: ../src/timer_17xx_40xx.c
+ 
+Building file: ../src/uart_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart_17xx_40xx.d" -MT"src/uart_17xx_40xx.o" -MT"src/uart_17xx_40xx.d" -o "src/uart_17xx_40xx.o" "../src/uart_17xx_40xx.c"
+Finished building: ../src/uart_17xx_40xx.c
+ 
+Building file: ../src/wwdt_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/wwdt_17xx_40xx.d" -MT"src/wwdt_17xx_40xx.o" -MT"src/wwdt_17xx_40xx.d" -o "src/wwdt_17xx_40xx.o" "../src/wwdt_17xx_40xx.c"
+Finished building: ../src/wwdt_17xx_40xx.c
+ 
+Building target: liblpc_chip_175x_6x.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_chip_175x_6x.a"  ./src/adc_17xx_40xx.o ./src/can_17xx_40xx.o ./src/chip_17xx_40xx.o ./src/clock_17xx_40xx.o ./src/cmp_17xx_40xx.o ./src/crc_17xx_40xx.o ./src/dac_17xx_40xx.o ./src/eeprom_17xx_40xx.o ./src/emc_17xx_40xx.o ./src/enet_17xx_40xx.o ./src/gpdma_17xx_40xx.o ./src/gpio_17xx_40xx.o ./src/gpioint_17xx_40xx.o ./src/i2c_17xx_40xx.o ./src/i2s_17xx_40xx.o ./src/iap.o ./src/iocon_17xx_40xx.o ./src/lcd_17xx_40xx.o ./src/pmu_17xx_40xx.o ./src/ring_buffer.o ./src/ritimer_17xx_40xx.o ./src/rtc_17xx_40xx.o ./src/sdc_17xx_40xx.o ./src/sdmmc_17xx_40xx.o ./src/spi_17xx_40xx.o ./src/ssp_17xx_40xx.o ./src/stopwatch_17xx_40xx.o ./src/sysctl_17xx_40xx.o ./src/sysinit_17xx_40xx.o ./src/timer_17xx_40xx.o ./src/uart_17xx_40xx.o ./src/wwdt_17xx_40xx.o   
+arm-none-eabi-ar: creating liblpc_chip_175x_6x.a
+Finished building target: liblpc_chip_175x_6x.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_chip_175x_6x.a" ; # arm-none-eabi-objdump -h -S "liblpc_chip_175x_6x.a" >"liblpc_chip_175x_6x.lss"
+   text	   data	    bss	    dec	    hex	filename
+    408	      0	      0	    408	    198	adc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   4880	      0	      0	   4880	   1310	can_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     80	      0	      0	     80	     50	chip_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    760	      0	      0	    760	    2f8	clock_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	cmp_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	crc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     56	      0	      0	     56	     38	dac_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	eeprom_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	emc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    528	      0	      4	    532	    214	enet_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1352	     96	      8	   1456	    5b0	gpdma_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	gpio_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	gpioint_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1640	     84	    120	   1844	    734	i2c_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    732	      0	      0	    732	    2dc	i2s_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    408	      0	      0	    408	    198	iap.o (ex liblpc_chip_175x_6x.a)
+    128	      0	      0	    128	     80	iocon_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	lcd_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    156	      0	      0	    156	     9c	pmu_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    360	      0	      0	    360	    168	ring_buffer.o (ex liblpc_chip_175x_6x.a)
+    100	      0	      0	    100	     64	ritimer_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    388	      0	      0	    388	    184	rtc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	sdc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	sdmmc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    472	      0	      0	    472	    1d8	spi_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1136	      0	      0	   1136	    470	ssp_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    172	      0	     12	    184	     b8	stopwatch_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     20	      0	      0	     20	     14	sysctl_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    260	      0	      0	    260	    104	sysinit_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    132	      0	      0	    132	     84	timer_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1044	      0	      1	   1045	    415	uart_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     44	      0	      0	     44	     2c	wwdt_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+ 
+16:58:59 **** Incremental Build of configuration Debug for project app_osek_blinky ****
+make pre-build main-build 
+rm ../out/src/*.* ../out/inc/*.* ; php ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php  ../osek/gen/inc/Os_Cfg.h.php  ../osek/gen/src/Os_Cfg.c.php  ../osek/gen/src/Os_Internal_Cfg.c.php  ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/
+
+ciaaFirmware RTOS Generator - Copyright 2008, 2009, Mariano Cerdeiro
+                              Copyright 2014, ACSE & CADIEEL
+         ACSE : http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/ciaa/
+         CADIEEL: http://www.cadieel.org.ar
+
+INFO: the generator was called as follow:
+INFO: ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php ../osek/gen/inc/Os_Cfg.h.php ../osek/gen/src/Os_Cfg.c.php ../osek/gen/src/Os_Internal_Cfg.c.php ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/ 
+INFO: ------ LICENSE START ------
+INFO: This file is part of CIAA Firmware.
+INFO: Redistribution and use in source and binary forms, with or without
+INFO: modification, are permitted provided that the following conditions are met:
+INFO: 1. Redistributions of source code must retain the above copyright notice,
+INFO: this list of conditions and the following disclaimer.
+INFO: 2. Redistributions in binary form must reproduce the above copyright notice,
+INFO: this list of conditions and the following disclaimer in the documentation
+INFO: and/or other materials provided with the distribution.
+INFO: 3. Neither the name of the copyright holder nor the names of its
+INFO: contributors may be used to endorse or promote products derived from this
+INFO: software without specific prior written permission.
+INFO: THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+INFO: AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+INFO: IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+INFO: ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+INFO: LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+INFO: CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+INFO: SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INFO: INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+INFO: CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+INFO: ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+INFO: POSSIBILITY OF SUCH DAMAGE.
+INFO: ------- LICENSE END -------
+INFO: list of configuration files:
+INFO: configuration file 1: ../etc/config.oil
+INFO: list of files to be generated:
+INFO: generated file 1: ../osek/gen/inc/Os_Internal_Cfg.h.php
+INFO: generated file 2: ../osek/gen/inc/Os_Cfg.h.php
+INFO: generated file 3: ../osek/gen/src/Os_Cfg.c.php
+INFO: generated file 4: ../osek/gen/src/Os_Internal_Cfg.c.php
+INFO: generated file 5: ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php
+INFO: generated file 6: ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php
+INFO: output directory: ../out/
+INFO: reading ../etc/config.oil
+INFO: generating ../osek/gen/inc/Os_Internal_Cfg.h.php to ../out//inc/Os_Internal_Cfg.h
+INFO: generating ../osek/gen/inc/Os_Cfg.h.php to ../out//inc/Os_Cfg.h
+INFO: generating ../osek/gen/src/Os_Cfg.c.php to ../out//src/Os_Cfg.c
+INFO: generating ../osek/gen/src/Os_Internal_Cfg.c.php to ../out//src/Os_Internal_Cfg.c
+INFO: generating ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php to ../out//src/cortexM4/Os_Internal_Arch_Cfg.c
+INFO: generating ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php to ../out//inc/cortexM4/Os_Internal_Arch_Cfg.h
+INFO: Generation Finished with WARNINGS: 0 and ERRORS: 0
+ 
+Building file: ../src/cr_startup_lpc175x_6x.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x.d" -MT"src/cr_startup_lpc175x_6x.o" -MT"src/cr_startup_lpc175x_6x.d" -o "src/cr_startup_lpc175x_6x.o" "../src/cr_startup_lpc175x_6x.c"
+Finished building: ../src/cr_startup_lpc175x_6x.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/osek_blinky.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/osek_blinky.d" -MT"src/osek_blinky.o" -MT"src/osek_blinky.d" -o "src/osek_blinky.o" "../src/osek_blinky.c"
+Finished building: ../src/osek_blinky.c
+ 
+Building file: ../src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/sysinit.c
+ 
+Building file: ../out/src/cortexM4/Os_Internal_Arch_Cfg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"out/src/cortexM4/Os_Internal_Arch_Cfg.d" -MT"out/src/cortexM4/Os_Internal_Arch_Cfg.o" -MT"out/src/cortexM4/Os_Internal_Arch_Cfg.d" -o "out/src/cortexM4/Os_Internal_Arch_Cfg.o" "../out/src/cortexM4/Os_Internal_Arch_Cfg.c"
+Finished building: ../out/src/cortexM4/Os_Internal_Arch_Cfg.c
+ 
+Building file: ../out/src/Os_Cfg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"out/src/Os_Cfg.d" -MT"out/src/Os_Cfg.o" -MT"out/src/Os_Cfg.d" -o "out/src/Os_Cfg.o" "../out/src/Os_Cfg.c"
+Finished building: ../out/src/Os_Cfg.c
+ 
+Building file: ../out/src/Os_Internal_Cfg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"out/src/Os_Internal_Cfg.d" -MT"out/src/Os_Internal_Cfg.o" -MT"out/src/Os_Internal_Cfg.d" -o "out/src/Os_Internal_Cfg.o" "../out/src/Os_Internal_Cfg.c"
+Finished building: ../out/src/Os_Internal_Cfg.c
+ 
+Building file: ../osek/src/cortexM4/Os_Arch.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/Os_Arch.d" -MT"osek/src/cortexM4/Os_Arch.o" -MT"osek/src/cortexM4/Os_Arch.d" -o "osek/src/cortexM4/Os_Arch.o" "../osek/src/cortexM4/Os_Arch.c"
+Finished building: ../osek/src/cortexM4/Os_Arch.c
+ 
+Building file: ../osek/src/cortexM4/Os_Internal_Arch.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/Os_Internal_Arch.d" -MT"osek/src/cortexM4/Os_Internal_Arch.o" -MT"osek/src/cortexM4/Os_Internal_Arch.d" -o "osek/src/cortexM4/Os_Internal_Arch.o" "../osek/src/cortexM4/Os_Internal_Arch.c"
+Finished building: ../osek/src/cortexM4/Os_Internal_Arch.c
+ 
+Building file: ../osek/src/cortexM4/PendSV.s
+Invoking: MCU Assembler
+arm-none-eabi-gcc -c -x assembler-with-cpp -D__REDLIB__ -g3 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -o "osek/src/cortexM4/PendSV.o" "../osek/src/cortexM4/PendSV.s"
+Finished building: ../osek/src/cortexM4/PendSV.s
+ 
+Building file: ../osek/src/cortexM4/StartOs_Arch.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/StartOs_Arch.d" -MT"osek/src/cortexM4/StartOs_Arch.o" -MT"osek/src/cortexM4/StartOs_Arch.d" -o "osek/src/cortexM4/StartOs_Arch.o" "../osek/src/cortexM4/StartOs_Arch.c"
+Finished building: ../osek/src/cortexM4/StartOs_Arch.c
+ 
+Building file: ../osek/src/cortexM4/StartOs_Arch_SysTick.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/cortexM4/StartOs_Arch_SysTick.d" -MT"osek/src/cortexM4/StartOs_Arch_SysTick.o" -MT"osek/src/cortexM4/StartOs_Arch_SysTick.d" -o "osek/src/cortexM4/StartOs_Arch_SysTick.o" "../osek/src/cortexM4/StartOs_Arch_SysTick.c"
+Finished building: ../osek/src/cortexM4/StartOs_Arch_SysTick.c
+ 
+Building file: ../osek/src/ActivateTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ActivateTask.d" -MT"osek/src/ActivateTask.o" -MT"osek/src/ActivateTask.d" -o "osek/src/ActivateTask.o" "../osek/src/ActivateTask.c"
+Finished building: ../osek/src/ActivateTask.c
+ 
+Building file: ../osek/src/CancelAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/CancelAlarm.d" -MT"osek/src/CancelAlarm.o" -MT"osek/src/CancelAlarm.d" -o "osek/src/CancelAlarm.o" "../osek/src/CancelAlarm.c"
+Finished building: ../osek/src/CancelAlarm.c
+ 
+Building file: ../osek/src/ChainTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ChainTask.d" -MT"osek/src/ChainTask.o" -MT"osek/src/ChainTask.d" -o "osek/src/ChainTask.o" "../osek/src/ChainTask.c"
+Finished building: ../osek/src/ChainTask.c
+ 
+Building file: ../osek/src/ClearEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ClearEvent.d" -MT"osek/src/ClearEvent.o" -MT"osek/src/ClearEvent.d" -o "osek/src/ClearEvent.o" "../osek/src/ClearEvent.c"
+Finished building: ../osek/src/ClearEvent.c
+ 
+Building file: ../osek/src/GetActiveApplicationMode.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetActiveApplicationMode.d" -MT"osek/src/GetActiveApplicationMode.o" -MT"osek/src/GetActiveApplicationMode.d" -o "osek/src/GetActiveApplicationMode.o" "../osek/src/GetActiveApplicationMode.c"
+Finished building: ../osek/src/GetActiveApplicationMode.c
+ 
+Building file: ../osek/src/GetAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetAlarm.d" -MT"osek/src/GetAlarm.o" -MT"osek/src/GetAlarm.d" -o "osek/src/GetAlarm.o" "../osek/src/GetAlarm.c"
+Finished building: ../osek/src/GetAlarm.c
+ 
+Building file: ../osek/src/GetAlarmBase.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetAlarmBase.d" -MT"osek/src/GetAlarmBase.o" -MT"osek/src/GetAlarmBase.d" -o "osek/src/GetAlarmBase.o" "../osek/src/GetAlarmBase.c"
+Finished building: ../osek/src/GetAlarmBase.c
+ 
+Building file: ../osek/src/GetEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetEvent.d" -MT"osek/src/GetEvent.o" -MT"osek/src/GetEvent.d" -o "osek/src/GetEvent.o" "../osek/src/GetEvent.c"
+Finished building: ../osek/src/GetEvent.c
+ 
+Building file: ../osek/src/GetResource.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetResource.d" -MT"osek/src/GetResource.o" -MT"osek/src/GetResource.d" -o "osek/src/GetResource.o" "../osek/src/GetResource.c"
+Finished building: ../osek/src/GetResource.c
+ 
+Building file: ../osek/src/GetTaskID.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetTaskID.d" -MT"osek/src/GetTaskID.o" -MT"osek/src/GetTaskID.d" -o "osek/src/GetTaskID.o" "../osek/src/GetTaskID.c"
+Finished building: ../osek/src/GetTaskID.c
+ 
+Building file: ../osek/src/GetTaskState.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/GetTaskState.d" -MT"osek/src/GetTaskState.o" -MT"osek/src/GetTaskState.d" -o "osek/src/GetTaskState.o" "../osek/src/GetTaskState.c"
+Finished building: ../osek/src/GetTaskState.c
+ 
+Building file: ../osek/src/Os.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/Os.d" -MT"osek/src/Os.o" -MT"osek/src/Os.d" -o "osek/src/Os.o" "../osek/src/Os.c"
+Finished building: ../osek/src/Os.c
+ 
+Building file: ../osek/src/Os_Internal.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/Os_Internal.d" -MT"osek/src/Os_Internal.o" -MT"osek/src/Os_Internal.d" -o "osek/src/Os_Internal.o" "../osek/src/Os_Internal.c"
+Finished building: ../osek/src/Os_Internal.c
+ 
+Building file: ../osek/src/ReleaseResource.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ReleaseResource.d" -MT"osek/src/ReleaseResource.o" -MT"osek/src/ReleaseResource.d" -o "osek/src/ReleaseResource.o" "../osek/src/ReleaseResource.c"
+Finished building: ../osek/src/ReleaseResource.c
+ 
+Building file: ../osek/src/Schedule.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/Schedule.d" -MT"osek/src/Schedule.o" -MT"osek/src/Schedule.d" -o "osek/src/Schedule.o" "../osek/src/Schedule.c"
+Finished building: ../osek/src/Schedule.c
+ 
+Building file: ../osek/src/SetAbsAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/SetAbsAlarm.d" -MT"osek/src/SetAbsAlarm.o" -MT"osek/src/SetAbsAlarm.d" -o "osek/src/SetAbsAlarm.o" "../osek/src/SetAbsAlarm.c"
+Finished building: ../osek/src/SetAbsAlarm.c
+ 
+Building file: ../osek/src/SetEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/SetEvent.d" -MT"osek/src/SetEvent.o" -MT"osek/src/SetEvent.d" -o "osek/src/SetEvent.o" "../osek/src/SetEvent.c"
+Finished building: ../osek/src/SetEvent.c
+ 
+Building file: ../osek/src/SetRelAlarm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/SetRelAlarm.d" -MT"osek/src/SetRelAlarm.o" -MT"osek/src/SetRelAlarm.d" -o "osek/src/SetRelAlarm.o" "../osek/src/SetRelAlarm.c"
+Finished building: ../osek/src/SetRelAlarm.c
+ 
+Building file: ../osek/src/ShutdownOS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/ShutdownOS.d" -MT"osek/src/ShutdownOS.o" -MT"osek/src/ShutdownOS.d" -o "osek/src/ShutdownOS.o" "../osek/src/ShutdownOS.c"
+Finished building: ../osek/src/ShutdownOS.c
+ 
+Building file: ../osek/src/StartOS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/StartOS.d" -MT"osek/src/StartOS.o" -MT"osek/src/StartOS.d" -o "osek/src/StartOS.o" "../osek/src/StartOS.c"
+Finished building: ../osek/src/StartOS.c
+ 
+Building file: ../osek/src/TerminateTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/TerminateTask.d" -MT"osek/src/TerminateTask.o" -MT"osek/src/TerminateTask.d" -o "osek/src/TerminateTask.o" "../osek/src/TerminateTask.c"
+Finished building: ../osek/src/TerminateTask.c
+ 
+Building file: ../osek/src/WaitEvent.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__CODE_RED -DCPUTYPE=lpc43xx -DARCH=cortexM4 -DCPU=lpc4337 -DCORE_M3 -D__USE_LPCOPEN -D__LPC17XX__ -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/osek/inc/cortexM4/lpc43xx" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/app_osek_blinky/out/inc/cortexM4" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/inc" -I"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/inc" -Og -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"osek/src/WaitEvent.d" -MT"osek/src/WaitEvent.o" -MT"osek/src/WaitEvent.d" -o "osek/src/WaitEvent.o" "../osek/src/WaitEvent.c"
+Finished building: ../osek/src/WaitEvent.c
+ 
+Building target: app_osek_blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_board_nxp_lpcxpresso_1769/Debug" -L"/home/pablo/Documents/CIAA-Repositories/FreeOSEK_LPC1769/lpc_chip_175x_6x/Debug" -mcpu=cortex-m3 -mthumb -T app_osek_blinky.ld -o "app_osek_blinky.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/osek_blinky.o ./src/sysinit.o  ./out/src/cortexM4/Os_Internal_Arch_Cfg.o  ./out/src/Os_Cfg.o ./out/src/Os_Internal_Cfg.o  ./osek/src/cortexM4/Os_Arch.o ./osek/src/cortexM4/Os_Internal_Arch.o ./osek/src/cortexM4/PendSV.o ./osek/src/cortexM4/StartOs_Arch.o ./osek/src/cortexM4/StartOs_Arch_SysTick.o  ./osek/src/ActivateTask.o ./osek/src/CancelAlarm.o ./osek/src/ChainTask.o ./osek/src/ClearEvent.o ./osek/src/GetActiveApplicationMode.o ./osek/src/GetAlarm.o ./osek/src/GetAlarmBase.o ./osek/src/GetEvent.o ./osek/src/GetResource.o ./osek/src/GetTaskID.o ./osek/src/GetTaskState.o ./osek/src/Os.o ./osek/src/Os_Internal.o ./osek/src/ReleaseResource.o ./osek/src/Schedule.o ./osek/src/SetAbsAlarm.o ./osek/src/SetEvent.o ./osek/src/SetRelAlarm.o ./osek/src/ShutdownOS.o ./osek/src/StartOS.o ./osek/src/TerminateTask.o ./osek/src/WaitEvent.o   -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x
+Finished building target: app_osek_blinky.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "app_osek_blinky.axf"; # arm-none-eabi-objcopy -v -O binary "app_osek_blinky.axf" "app_osek_blinky.bin" ; # checksum -p LPC1769 -d "app_osek_blinky.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14408	     12	   2592	  17012	   4274	app_osek_blinky.axf
+ 
+17:11:00 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1769 ****
+make all 
+make: Nothing to be done for `all'.
+17:11:00 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make all 
+make: Nothing to be done for `all'.
+17:11:01 **** Incremental Build of configuration Debug for project app_osek_blinky ****
+make pre-build main-build 
+rm ../out/src/*.* ../out/inc/*.* ; php ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php  ../osek/gen/inc/Os_Cfg.h.php  ../osek/gen/src/Os_Cfg.c.php  ../osek/gen/src/Os_Internal_Cfg.c.php  ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/
+
+ciaaFirmware RTOS Generator - Copyright 2008, 2009, Mariano Cerdeiro
+                              Copyright 2014, ACSE & CADIEEL
+         ACSE : http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/ciaa/
+         CADIEEL: http://www.cadieel.org.ar
+
+INFO: the generator was called as follow:
+INFO: ../osek/generator/generator.php --cmdline -l -v -c ../etc/config.oil -f ../osek/gen/inc/Os_Internal_Cfg.h.php ../osek/gen/inc/Os_Cfg.h.php ../osek/gen/src/Os_Cfg.c.php ../osek/gen/src/Os_Internal_Cfg.c.php ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php -o ../out/ 
+INFO: ------ LICENSE START ------
+INFO: This file is part of CIAA Firmware.
+INFO: Redistribution and use in source and binary forms, with or without
+INFO: modification, are permitted provided that the following conditions are met:
+INFO: 1. Redistributions of source code must retain the above copyright notice,
+INFO: this list of conditions and the following disclaimer.
+INFO: 2. Redistributions in binary form must reproduce the above copyright notice,
+INFO: this list of conditions and the following disclaimer in the documentation
+INFO: and/or other materials provided with the distribution.
+INFO: 3. Neither the name of the copyright holder nor the names of its
+INFO: contributors may be used to endorse or promote products derived from this
+INFO: software without specific prior written permission.
+INFO: THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+INFO: AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+INFO: IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+INFO: ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+INFO: LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+INFO: CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+INFO: SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INFO: INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+INFO: CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+INFO: ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+INFO: POSSIBILITY OF SUCH DAMAGE.
+INFO: ------- LICENSE END -------
+INFO: list of configuration files:
+INFO: configuration file 1: ../etc/config.oil
+INFO: list of files to be generated:
+INFO: generated file 1: ../osek/gen/inc/Os_Internal_Cfg.h.php
+INFO: generated file 2: ../osek/gen/inc/Os_Cfg.h.php
+INFO: generated file 3: ../osek/gen/src/Os_Cfg.c.php
+INFO: generated file 4: ../osek/gen/src/Os_Internal_Cfg.c.php
+INFO: generated file 5: ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php
+INFO: generated file 6: ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php
+INFO: output directory: ../out/
+INFO: reading ../etc/config.oil
+INFO: generating ../osek/gen/inc/Os_Internal_Cfg.h.php to ../out//inc/Os_Internal_Cfg.h
+INFO: generating ../osek/gen/inc/Os_Cfg.h.php to ../out//inc/Os_Cfg.h
+INFO: generating ../osek/gen/src/Os_Cfg.c.php to ../out//src/Os_Cfg.c
+INFO: generating ../osek/gen/src/Os_Internal_Cfg.c.php to ../out//src/Os_Internal_Cfg.c
+INFO: generating ../osek/gen/src/cortexM4/Os_Internal_Arch_Cfg.c.php to ../out//src/cortexM4/Os_Internal_Arch_Cfg.c
+INFO: generating ../osek/gen/inc/cortexM4/Os_Internal_Arch_Cfg.h.php to ../out//inc/cortexM4/Os_Internal_Arch_Cfg.h
+INFO: Generation Finished with WARNINGS: 0 and ERRORS: 0
+ 
+make: Nothing to be done for `main-build'.
