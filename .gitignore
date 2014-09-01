@@ -23,7 +23,7 @@
 *.hex
 
 # Eclipse metadata files
-#.metadata
+.metadata
 
 # Backup files
 *~
