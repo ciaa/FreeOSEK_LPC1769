@@ -23,6 +23,14 @@
 *.hex
 
 # Eclipse metadata files
+/**/.metadata
+/**/.settings
+/**/RemoteSystemsTempFiles
+/**/Debug
+*.launch
+*.cproject
+*.project
+.settings
 .metadata
 
 # Backup files
