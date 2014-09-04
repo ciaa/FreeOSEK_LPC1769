@@ -28,11 +28,13 @@
 /**/RemoteSystemsTempFiles
 /**/Debug
 *.launch
-*.cproject
-*.project
+#*.cproject
+#*.project
 .settings
 .metadata
 
 # Backup files
 *~
 
+# Generated OSEK files
+**/out/

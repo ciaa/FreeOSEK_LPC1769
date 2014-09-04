@@ -190,11 +190,11 @@ TASK(TaskInit)
 
 	/* Set 500 tick alarm for TaskPeriodic */
 	printf("InitTask: SetRelAlarm for TaskPeriodic.\n");
-	SetRelAlarm(ActivateTaskPeriodic, 0, 500);
+	SetRelAlarm(ActivateTaskPeriodic, 50, 500);
 
 	/* Set 1000 tick callback alarm */
-	printf("InitTask: SetRelAlarm for AppCallback.\n");
-	SetRelAlarm(AppCallbackAlarm, 100, 1000);
+//	printf("InitTask: SetRelAlarm for AppCallback.\n");
+//	SetRelAlarm(AppCallbackAlarm, 100, 1000);
 
 	/* Activate TaskBlink */
 	printf("InitTask: Activate TaskBlink.\n");
@@ -250,6 +250,7 @@ TASK(TaskBackground)
 	{
 		i++;
 		lwipLoop();
+//		Schedule();
 	}
 }
 
