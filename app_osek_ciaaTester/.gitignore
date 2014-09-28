@@ -28,8 +28,8 @@
 /**/RemoteSystemsTempFiles
 /**/Debug
 *.launch
-#*.cproject
-#*.project
+*.cproject
+*.project
 .settings
 .metadata
 
