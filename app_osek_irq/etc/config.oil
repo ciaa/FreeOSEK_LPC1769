@@ -15,6 +15,11 @@ APPMODE = AppMode1;
 
 EVENT = evBlink;
 
+ISR myEINT3_IRQHandler {
+	CATEGORY = 2;
+	INTERRUPT = EINT3;
+};
+
 TASK TaskInit {
     PRIORITY = 1;
     ACTIVATION = 1;
@@ -36,30 +41,10 @@ TASK TaskBlink {
 }
 
 COUNTER HardwareCounter {
-   MAXALLOWEDVALUE = 100;
+   MAXALLOWEDVALUE = 60000000;
    TICKSPERBASE = 1;
    MINCYCLE = 1;
    TYPE = HARDWARE;
-   COUNTER = HWCOUNTER0;
-};
-
-COUNTER SoftwareCounter {
-   MAXALLOWEDVALUE = 5000;
-   TICKSPERBASE = 1;
-   MINCYCLE = 1;
-   TYPE = SOFTWARE;
-};
-
-ALARM IncrementSWCounter {
-   COUNTER = HardwareCounter;
-   ACTION = INCREMENT {
-      COUNTER = SoftwareCounter;
-   };
-   AUTOSTART = TRUE {
-      APPMODE = AppMode1;
-      ALARMTIME = 1;
-      CYCLETIME = 1;
-   };
 };
 
 };

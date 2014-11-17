@@ -58,7 +58,7 @@
  * modification history (new versions first)
  * -----------------------------------------------------------
  * v0.1.2 20090330 MaCe improve Types.h (many changes)
- * v0.1.1 20090128 MaCe add DISABLE and ENABLE macros
+ * v0.1.1 20090128 MaCe add OSEK_DISABLE and OSEK_ENABLE macros
  * v0.1.0 20081126 MaCe initial version
  */
 
@@ -66,18 +66,18 @@
 #include "Compiler.h"
 
 /*==================[macros]=================================================*/
-#ifndef ENABLE
-/** \brief ENABLE macro with the value 1 */
-#define ENABLE 1
-#elif ENABLE != 1
-#error ENABLE defined somewhere else with a different value
+#ifndef OSEK_ENABLE
+/** \brief OSEK_ENABLE macro with the value 1 */
+#define OSEK_ENABLE 1
+#elif OSEK_ENABLE != 1
+#error OSEK_ENABLE defined somewhere else with a different value
 #endif
 
-#ifndef DISABLE
-/** \brief DISABLE macro 2 */
-#define DISABLE 2
-#elif DISABLE != 2
-#error DISABLE defined somewhere else with a different value
+#ifndef OSEK_DISABLE
+/** \brief OSEK_DISABLE macro 2 */
+#define OSEK_DISABLE 2
+#elif OSEK_DISABLE != 2
+#error OSEK_DISABLE defined somewhere else with a different value
 #endif
 
 /** \brief Check for C99-Compiler */
@@ -100,35 +100,25 @@
 #define FREESTANDING_ENV
 #endif
 
-/** \brief Define INLINE- and RESTRICT-Macros */
-#if defined(C99_COMPILER)
-#define INLINE inline
-#define RESTRICT restrict
-#elif defined(CPP_COMPILER)
-#define INLINE inline
-#define RESTRICT
-#else
-#ifndef INLINE
-#define INLINE
-#endif
-#define RESTRICT
-#endif
-
 /** \brief Definition of FALSE */
 #if !defined(FALSE)
-#if defined(C99_COMPILER) || defined(CPP_COMPILER)
-#define FALSE false
-#else
-#define FALSE ((boolean)0)
-#endif
+	#if defined(C99_COMPILER) || defined(CPP_COMPILER)
+		#ifndef FALSE
+			#define FALSE false
+		#else
+			#define FALSE ((boolean)0)
+		#endif
+	#endif
 #endif
 
 /** \brief Definiton of TRUE */
 #if !defined(TRUE)
 #if defined(C99_COMPILER) || defined(CPP_COMPILER)
+#ifndef TRUE
 #define TRUE true
 #else
 #define TRUE ((boolean)1)
+#endif
 #endif
 #endif
 
@@ -150,46 +140,46 @@
 
 #if defined(C99_COMPILER) || defined(CPP_COMPILER)
 /** \brief boolean type type definition */
-typedef bool				boolean;
+typedef _Bool				boolean;
 
 /** \brief default usigned 8 bits integer type definition */
-typedef char				sint8;
+typedef int8_t				sint8;
 /** \brief default signed 8 bits integer type definition */
-typedef unsigned char			uint8;
+typedef uint8_t			uint8;
 /** \brief default signed 16 bits integer type definition */
-typedef short			sint16;
+typedef int16_t			sint16;
 /** \brief default unsigned 16 bits integer type definition */
-typedef unsigned short			uint16;
+typedef uint16_t			uint16;
 /** \brief default signed 32 bits integer type definition */
-typedef int			sint32;
+typedef int32_t			sint32;
 /** \brief default unsigned 32 bits integer type definition */
-typedef unsigned int			uint32;
+typedef uint32_t			uint32;
 
 /** \brief default signed 8 bits fast integer type definition */
-typedef char		sint8_least;
+typedef int_least8_t		sint8_least;
 /** \brief default usigned 8 bits fast integer type definition */
-typedef unsigned char      uint8_least;
+typedef uint_least8_t   uint8_least;
 /** \brief default signed 16 bits fast integer type definition */
-typedef short   sint16_least;
+typedef int_least16_t   sint16_least;
 /** \brief default unsigned 16 bits fast integer type definition */
-typedef unsigned short  uint16_least;
+typedef uint_least16_t  uint16_least;
 /** \brief default signed 32 bits fast integer type definition */
-typedef int   sint32_least;
+typedef int_least32_t   sint32_least;
 /** \brief default unsigned 32 bits fast integer type definition */
-typedef unsigned int  uint32_least;
+typedef uint_least32_t  uint32_least;
 
 /** \brief default signed 8 bits fast integer type definition */
-typedef char		sint8f;
+typedef int_fast8_t		sint8f;
 /** \brief default unsigned 8 bits fast integer type definition */
-typedef unsigned char		uint8f;
+typedef uint_fast8_t		uint8f;
 /** \brief default signed 16 bits fast integer type definition */
-typedef short		sint16f;
+typedef int_fast16_t		sint16f;
 /** \brief default unsigned 16 bits fast integer type definition */
-typedef unsigned short   uint16f;
+typedef uint_fast16_t   uint16f;
 /** \brief default signed 32 bits fast integer type definition */
-typedef int		sint32f;
+typedef int_fast32_t		sint32f;
 /** \brief default unsigned 32 bits fast integer type definition */
-typedef  unsigned int   uint32f;
+typedef uint_fast32_t   uint32f;
 
 #else /* #if defined(C99_COMPILER) || defined(CPP_COMPILER) */
 

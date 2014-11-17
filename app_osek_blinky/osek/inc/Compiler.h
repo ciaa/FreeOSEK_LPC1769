@@ -81,24 +81,6 @@
 #undef  CPP_COMPILER
 #endif
 
-/* define INLINE and RESTRICT depending on _OS_CPP_COMPILER and
- * _OS_C99_COMPILER
- */
-#if (defined C99_COMPILER)
-#ifndef INLINE
-#define INLINE inline
-#define RESTRICT restrict
-#endif
-#elif (defined OS_CPP_COMPILER)
-#define INLINE inline
-#define RESTRICT
-#else
-#ifndef INLINE
-#define INLINE
-#endif
-#define RESTRICT
-#endif
-
 /*==================[typedef]================================================*/
 
 /*==================[external data declaration]==============================*/

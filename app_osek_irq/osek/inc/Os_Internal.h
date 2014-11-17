@@ -78,7 +78,6 @@
 #endif /* #ifdef OSEK_INLCUDE_INTERNAL_ARCH_CPU */
 #include "Os_Internal_Arch_Cfg.h"
 #include "Os_Internal_Cfg.h"
-#include "stddef.h"
 
 /*==================[macros]=================================================*/
 /** \brief Invalid Task */
@@ -113,11 +112,8 @@
  ** This interface release the internal resources of the actual task
  **/
 #define ReleaseInternalResources()							\
-	{																	\
-		/* set the priority to the normal value */		\
-		TasksVar[GetRunningTask()].ActualPriority =		\
-		TasksConst[GetRunningTask()].StaticPriority;		\
-	}
+{																	   \
+}
 
 /** \brief Invalid Context */
 #define CONTEXT_INVALID ((ContextType)0U)
@@ -151,9 +147,9 @@
  **               - CONTEXT_ISR2
  **/
 #define SetActualContext(newcontext)    \
-	do {							    \
-		ActualContext = (newcontext);	\
-	} while(0)
+   do {							    \
+      ActualContext = (newcontext);	\
+   } while(0)
 
 /** \brief Get Running Task
  **
@@ -186,16 +182,16 @@
  ** This macro is called every time that an ISR Cat 2 is started
  **/
 #define PreIsr2(isr)                \
-    SetActualContext(CONTEXT_ISR2); \
-    PreIsr2_Arch(isr)
+   SetActualContext(CONTEXT_ISR2); \
+PreIsr2_Arch(isr)
 
 /** \brief Post ISR Macro
  **
  ** This macro is called every time that an ISR Cat 2 is finished
  **/
 #define PostIsr2(isr)               \
-    PostIsr2_Arch(isr)              \
-    SetActualContext(CONTEXT_TASK); \
+   PostIsr2_Arch(isr)              \
+SetActualContext(CONTEXT_TASK); \
 
 /*==================[typedef]================================================*/
 /** \brief ContextType
@@ -214,7 +210,7 @@ extern ContextType ActualContext;
 /** \brief RunningTask variable */
 extern TaskType RunningTask;
 
-/*==================[external functions declaration]=========================*/ 
+/*==================[external functions declaration]=========================*/
 /** \brief Architecture Dependnece Start Os function
  **
  ** This function is called from the StartOS function

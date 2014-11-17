@@ -48,6 +48,8 @@
 
 #include <string.h>
 
+#include "os.h"
+
 extern void msDelay(uint32_t ms);
 
 #if LPC_NUM_BUFF_TXDESCS < 2
@@ -758,7 +760,7 @@ s32_t lpc_tx_ready(struct netif *netif)
  * @note	This function handles the transmit, receive, and error interrupt of
  * the LPC17xx/40xx. This is meant to be used when NO_SYS=0.
  */
-void ETH_IRQHandler(void)
+ISR(ETH_IRQHandler)
 {
 #if NO_SYS == 1
 	/* Interrupts are not used without an RTOS */

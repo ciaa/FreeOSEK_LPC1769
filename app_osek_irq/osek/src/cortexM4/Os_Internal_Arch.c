@@ -129,8 +129,16 @@ void SysTick_Handler(void)
 	/* save actual context */
 	context = GetCallingContext();
 
+	/* Set context to CONTEXT_ISR2 instead of CONTEXT_DBG.
+	 * Still need to check this.
+	*/
+	SetActualContext(CONTEXT_ISR2);
+
 	/* call counter interrupt handler */
-	CounterIncrement = IncrementCounter(0, 1 /* CounterIncrement */);
+	CounterIncrement = IncrementCounter(0, 1 /* CounterIncrement */); /* TODO FIXME */
+
+	/* interrupt has to be called first after so many CounterIncrement */
+	/* SetCounterTime(CounterIncrement); */ /* TODO FIXME */
 
 	/* set context back */
 	SetActualContext(context);
@@ -145,7 +153,7 @@ void SysTick_Handler(void)
 	//ClearTimerInterrupt_Cpu();
 
 #if 0 /* TODO */
-#if (NON_PREEMPTIVE == DISABLE)
+#if (NON_PREEMPTIVE == OSEK_DISABLE)
 		/* check if interrupt a Task Context */
 		if ( GetCallingContext() ==  CONTEXT_TASK )
 		{
@@ -156,7 +164,7 @@ void SysTick_Handler(void)
 				(void)Schedule();
 			}
 		}
-#endif /* #if (NON_PREEMPTIVE == ENABLE) */
+#endif /* #if (NON_PREEMPTIVE == OSEK_ENABLE) */
 #endif
 }
 

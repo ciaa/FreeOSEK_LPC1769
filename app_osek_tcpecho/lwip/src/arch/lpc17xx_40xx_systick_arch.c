@@ -38,6 +38,8 @@
 #include "chip.h"
 #include "arch/lpc_arch.h"
 
+#include "os.h"
+
 /** @ingroup NET_LWIP_ARCH
  * @{
  */
@@ -104,23 +106,14 @@ void SysTick_Disable(void)
  * @note	This function keeps a timebase for LWIP that can be
  * used for other functions.
  */
-void RIT_IRQHandler(void)
+ISR(RIT_IRQHandler)
 {
-#define CONTEXT_ISR2 3
-   typedef uint8_t ContextType;
-   extern ContextType ActualContext;
-
-   ContextType ctx = ActualContext;
-   ActualContext = CONTEXT_ISR2;
-
 	/* Clear RITimer Interrupt, Reload counter value */
 	Chip_RIT_ClearInt(LPC_RITIMER);
 	Chip_RIT_SetCOMPVAL(LPC_RITIMER, Chip_RIT_GetCounter(LPC_RITIMER) + reload_val);/* Reload value */
 
 	/* Increment tick count */
 	systick_timems += saved_period;
-
-   ActualContext = ctx;
 }
 
 

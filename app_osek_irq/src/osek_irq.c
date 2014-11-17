@@ -102,7 +102,7 @@ TASK(TaskBlink)
 	TerminateTask();
 }
 
-void EINT3_IRQHandler(void)
+ISR(myEINT3_IRQHandler)
 {
 	if(Chip_GPIOINT_GetIntFalling(LPC_GPIOINT, GPIOINT_PORT0) & (1<<18))
 	{

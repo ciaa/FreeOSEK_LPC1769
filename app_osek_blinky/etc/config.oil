@@ -23,7 +23,7 @@ TASK TaskInit {
     }
     STACK = 512;
     TYPE = BASIC;
-    SCHEDULE = FULL;
+    SCHEDULE = NON;
 }
 
 TASK TaskBlink {
@@ -52,44 +52,24 @@ TASK TaskBackground {
 }
 
 ALARM ActivateTaskPeriodic {
-    COUNTER = SoftwareCounter;
+    COUNTER = HardwareCounter;
     ACTION = ACTIVATETASK {
         TASK = TaskPeriodic;
     }
 }
 
 ALARM AppCallbackAlarm {
-    COUNTER = SoftwareCounter;
+    COUNTER = HardwareCounter;
     ACTION = ALARMCALLBACK {
         ALARMCALLBACKNAME = "AppCallback";
     }
 }
 
 COUNTER HardwareCounter {
-   MAXALLOWEDVALUE = 100;
+   MAXALLOWEDVALUE = 60000000;
    TICKSPERBASE = 1;
    MINCYCLE = 1;
    TYPE = HARDWARE;
-   COUNTER = HWCOUNTER0;
-};
-
-COUNTER SoftwareCounter {
-   MAXALLOWEDVALUE = 5000;
-   TICKSPERBASE = 1;
-   MINCYCLE = 1;
-   TYPE = SOFTWARE;
-};
-
-ALARM IncrementSWCounter {
-   COUNTER = HardwareCounter;
-   ACTION = INCREMENT {
-      COUNTER = SoftwareCounter;
-   };
-   AUTOSTART = TRUE {
-      APPMODE = AppMode1;
-      ALARMTIME = 1;
-      CYCLETIME = 1;
-   };
 };
 
 };
