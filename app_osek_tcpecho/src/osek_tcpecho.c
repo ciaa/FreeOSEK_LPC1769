@@ -250,7 +250,7 @@ TASK(TaskBackground)
 	{
 		i++;
 		lwipLoop();
-//		Schedule();
+		Schedule();
 	}
 }
 

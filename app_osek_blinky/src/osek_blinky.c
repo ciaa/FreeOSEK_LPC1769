@@ -124,6 +124,7 @@ TASK(TaskBackground)
 	while(1)
 	{
 		i++;
+		Schedule();
 	}
 }
 
