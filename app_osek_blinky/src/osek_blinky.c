@@ -124,7 +124,11 @@ TASK(TaskBackground)
 	while(1)
 	{
 		i++;
-		Schedule();
+		if(i == 0xFFFFF)
+		{
+			printf("TaskBackground still running...\n");
+			i = 0;
+		}
 	}
 }
 

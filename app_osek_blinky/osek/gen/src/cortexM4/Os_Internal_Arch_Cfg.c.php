@@ -128,44 +128,44 @@ void DebugMon_Handler(void) {
 
 <?php
 /* Interrupt sources for LPC43xx.
- * See externals/platforms/cortexM4/lpc43xx/inc/cmsis_43xx.h.
+ * See lpc_chip_175x_6x/inc/cmsis_175x_6x.h.
  */
 $intList = array (
-   0 => "WDT",
-   1 => "TIMER0",
-   2 => "TIMER1",
-   3 => "TIMER2",
-   4 => "TIMER3",
-   5 => "UART0",
-   6 => "UART1",
-   7 => "UART2",
-   8 => "UART3",
-   9 => "PWM1",
-   10 => "I2C0",
-   11 => "I2C1",
-   12 => "I2C2",
-   13 => "SPI",
-   14 => "SSP0",
-   15 => "SSP1",
-   16 => "PLL0",
-   17 => "RTC",
-   18 => "EINT0",
-   19 => "EINT1",
-   20 => "EINT2",
-   21 => "EINT3",
-   22 => "ADC",
-   23 => "BOD",
-   24 => "USB",
-   25 => "CAN",
-   26 => "DMA",
-   27 => "I2S",
-   28 => "ETH",
-   29 => "RIT",
-   30 => "MCPWM",
-   31 => "QEI",
-   32 => "PLL1",
-   33 => "USBAct",
-   34 => "CANAct"
+	0 => "WDT",
+	1 => "TIMER0",
+	2 => "TIMER1",
+	3 => "TIMER2",
+	4 => "TIMER3",
+	5 => "UART0",
+	6 => "UART1",
+	7 => "UART2",
+	8 => "UART3",
+	9 => "PWM1",
+	10 => "I2C0",
+	11 => "I2C1",
+	12 => "I2C2",
+	13 => "SPI",
+	14 => "SSP0",
+	15 => "SSP1",
+	16 => "PLL0",
+	17 => "RTC",
+	18 => "EINT0",
+	19 => "EINT1",
+	20 => "EINT2",
+	21 => "EINT3",
+	22 => "ADC",
+	23 => "BOD",
+	24 => "USB",
+	25 => "CAN",
+	26 => "DMA",
+	27 => "I2S",
+	28 => "ETH",
+	29 => "RIT",
+	30 => "MCPWM",
+	31 => "QEI",
+	32 => "PLL1",
+	33 => "USBAct",
+	34 => "CANAct"
 );
 
 $MAX_INT_COUNT = max(array_keys($intList))+1;
@@ -173,23 +173,23 @@ $MAX_INT_COUNT = max(array_keys($intList))+1;
 /** \brief LPC4337 Interrupt vector */
 __attribute__ ((section(".isr_vector")))
 void (* const g_pfnVectors[])(void) = {
-   // Core Level - CM4
-   &_vStackTop,                    // The initial stack pointer
-   ResetISR,                       // The reset handler
-   NMI_Handler,                    // The NMI handler
-   HardFault_Handler,              // The hard fault handler
-   MemManage_Handler,              // The MPU fault handler
-   BusFault_Handler,               // The bus fault handler
-   UsageFault_Handler,             // The usage fault handler
-   0,                              // Reserved
-   0,                              // Reserved
-   0,                              // Reserved
-   0,                              // Reserved
-   SVC_Handler,                    // SVCall handler
-   DebugMon_Handler,               // Debug monitor handler
-   0,                              // Reserved
-   PendSV_Handler,                 // The PendSV handler
-   SysTick_Handler,                // The SysTick handler
+   /* Core Level - CM4 */
+   &_vStackTop,                    /* The initial stack pointer  */
+   ResetISR,                       /* The reset handler          */
+   NMI_Handler,                    /* The NMI handler            */
+   HardFault_Handler,              /* The hard fault handler     */
+   MemManage_Handler,              /* The MPU fault handler      */
+   BusFault_Handler,               /* The bus fault handler      */
+   UsageFault_Handler,             /* The usage fault handler    */
+   0,                              /* Reserved                   */
+   0,                              /* Reserved                   */
+   0,                              /* Reserved                   */
+   0,                              /* Reserved                   */
+   SVC_Handler,                    /* SVCall handler             */
+   DebugMon_Handler,               /* Debug monitor handler      */
+   0,                              /* Reserved                   */
+   PendSV_Handler,                 /* The PendSV handler         */
+   SysTick_Handler,                /* The SysTick handler        */
 
    /* Chip Level - LPC43xx (M4 core) */
 <?php
