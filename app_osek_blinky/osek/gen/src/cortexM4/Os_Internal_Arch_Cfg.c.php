@@ -127,7 +127,7 @@ void DebugMon_Handler(void) {
 /*==================[external functions definition]==========================*/
 
 <?php
-/* Interrupt sources for LPC43xx.
+/* Interrupt sources for LPC17xx.
  * See lpc_chip_175x_6x/inc/cmsis_175x_6x.h.
  */
 $intList = array (
@@ -191,7 +191,7 @@ void (* const g_pfnVectors[])(void) = {
    PendSV_Handler,                 /* The PendSV handler         */
    SysTick_Handler,                /* The SysTick handler        */
 
-   /* Chip Level - LPC43xx (M4 core) */
+   /* Chip Level - LPC17xx (M3 core) */
 <?php
 
 /* get ISRs defined by user application */
@@ -228,6 +228,24 @@ for($i=0; $i < $MAX_INT_COUNT; $i++)
 }
 ?>
 };
+
+/** \brief Interrupt enabling and priority setting function */
+void Enable_User_ISRs(void)
+{
+<?php
+/* get ISRs defined by user application */
+$intnames = $config->getList("/OSEK","ISR");
+foreach ($intnames as $int)
+{
+   $source = $config->getValue("/OSEK/" . $int,"INTERRUPT");
+   $prio = $config->getValue("/OSEK/" . $int,"PRIORITY");
+
+   print "   /* Enabling IRQ $source with priority $prio */\n";
+   print "   NVIC_EnableIRQ(" . array_search($source, $intList) . ");\n";
+   print "   NVIC_SetPriority(" . array_search($source, $intList) . ", $prio);\n\n";
+}
+?>
+}
 
 /** @} doxygen end group definition */
 /** @} doxygen end group definition */

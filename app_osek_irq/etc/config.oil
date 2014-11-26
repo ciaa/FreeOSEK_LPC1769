@@ -18,6 +18,7 @@ EVENT = evBlink;
 ISR myEINT3_IRQHandler {
 	CATEGORY = 2;
 	INTERRUPT = EINT3;
+	PRIORITY = 0;
 };
 
 TASK TaskInit {

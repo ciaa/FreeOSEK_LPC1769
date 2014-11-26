@@ -18,11 +18,13 @@ EVENT = evBlink;
 ISR RIT_IRQHandler {
 	CATEGORY = 1;
 	INTERRUPT = RIT;
+	PRIORITY = 0;
 };
 
 ISR ETH_IRQHandler {
 	CATEGORY = 1;
 	INTERRUPT = ETH;
+	PRIORITY = 0;
 };
 
 TASK TaskInit {
